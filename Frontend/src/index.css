@@ -1,0 +1,88 @@
+@import "tailwindcss";
+/* ========================================
+   Portfolio Reveal Animations
+======================================== */
+
+.reveal-elem {
+  opacity: 0;
+  transform: translateY(40px);
+  filter: blur(8px);
+  transition:
+    opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.9s cubic-bezier(0.22, 1, 0.36, 1),
+    filter 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal-elem.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0);
+}
+
+/* Stagger animation */
+.reveal-elem:nth-child(1) {
+  transition-delay: 0.05s;
+}
+
+.reveal-elem:nth-child(2) {
+  transition-delay: 0.15s;
+}
+
+/* ========================================
+   Portrait Animation
+======================================== */
+
+.hero-portrait {
+  opacity: 0;
+  transform: translateY(80px) scale(0.94);
+  filter: blur(6px);
+
+  animation: portraitReveal 1.4s cubic-bezier(0.22, 1, 0.36, 1) 0.15s
+    forwards;
+
+  transition:
+    transform 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+    filter 0.5s ease;
+}
+
+.hero-portrait:hover {
+  transform: translateY(0) scale(1.015);
+}
+
+@keyframes portraitReveal {
+  0% {
+    opacity: 0;
+    transform: translateY(80px) scale(0.94);
+    filter: blur(6px);
+  }
+
+  60% {
+    opacity: 1;
+    filter: blur(0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+}
+
+.hero-glow {
+  opacity: 0;
+  transform: translateY(-48%) scale(0.7);
+  animation: glowReveal 1.6s ease-out 0.3s forwards;
+}
+
+.hero-glow-soft {
+  opacity: 0;
+  transform: translateY(-45%) scale(0.6);
+  animation: glowReveal 2s ease-out 0.1s forwards;
+}
+
+@keyframes glowReveal {
+  to {
+    opacity: 1;
+    transform: translateY(-48%) scale(1);
+  }
+}
