@@ -282,13 +282,13 @@ const SHOWCASE_PROJECTS = [
       "A live multiplayer web application built around an interactive gaming experience.",
 
     tabletPreview: {
-      type: "image",
-      src: "/Previews/oxduel.png",
+      type: "video",
+      src: "/Previews/oxduel2.mp4",
     },
 
     mobilePreview: {
       type: "image",
-      src: "/Previews/oxduel-mobile.png",
+      src: "/Previews/oxduel-mobile.jpeg",
     },
 
     badgeColor: "bg-[#a7f3d0]",
@@ -324,8 +324,8 @@ const SHOWCASE_PROJECTS = [
       "A software project developed with a focus on creating a practical, usable, and complete digital solution.",
 
     tabletPreview: {
-      type: "image",
-      src: "/Previews/evalon.png",
+      type: "video",
+      src: "/Previews/evalon.mp4",
     },
 
     mobilePreview: {
@@ -366,8 +366,8 @@ const SHOWCASE_PROJECTS = [
       "A project focused on exploring and building practical software experiences around AI.",
 
     tabletPreview: {
-      type: "image",
-      src: " /Previews/infinity-ai-pro.png",
+      type: "video",
+      src: " /Previews/infinity.mp4",
     },
 
     mobilePreview: {
