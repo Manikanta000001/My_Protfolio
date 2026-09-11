@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import img from "../public/image1.png";
+import img from "/image1.png";
 
 const Icon = ({ name, className = "w-4 h-4", ...props }) => {
   switch (name) {
@@ -241,12 +241,12 @@ const SHOWCASE_PROJECTS = [
 
     tabletPreview: {
       type: "video",
-      src: "../public/Previews/yoga-stories.mp4",
+      src: "/Previews/yoga-stories.mp4",
     },
 
     mobilePreview: {
       type: "image",
-      src: "../public/Previews/yoga-stories-mobile.png",
+      src: "/Previews/yoga-stories-mobile.png",
     },
 
     badgeColor: "bg-[#fef08a]",
@@ -283,12 +283,12 @@ const SHOWCASE_PROJECTS = [
 
     tabletPreview: {
       type: "image",
-      src: "../public/Previews/oxduel.png",
+      src: "/Previews/oxduel.png",
     },
 
     mobilePreview: {
       type: "image",
-      src: "../public/Previews/oxduel-mobile.png",
+      src: "/Previews/oxduel-mobile.png",
     },
 
     badgeColor: "bg-[#a7f3d0]",
@@ -325,12 +325,12 @@ const SHOWCASE_PROJECTS = [
 
     tabletPreview: {
       type: "image",
-      src: "../public/Previews/evalon.png",
+      src: "/Previews/evalon.png",
     },
 
     mobilePreview: {
       type: "image",
-      src: "../public/Previews/evalon-mobile.png",
+      src: "/Previews/evalon-mobile.png",
     },
 
     badgeColor: "bg-[#c7d2fe]",
