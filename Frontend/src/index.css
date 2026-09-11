@@ -86,3 +86,68 @@
     transform: translateY(-48%) scale(1);
   }
 }
+
+/* ================= INFINITE PROJECT SLIDER ================= */
+
+.projects-slider-wrapper {
+  width: 100%;
+  overflow: hidden;
+}
+
+.projects-slider {
+  width: 100%;
+  overflow: hidden;
+}
+
+.projects-track {
+  display: flex;
+  width: max-content;
+  gap: 1.25rem;
+
+  animation: projectInfiniteScroll 55s linear infinite;
+
+  will-change: transform;
+}
+
+
+/* Pause when cursor is over the project area */
+
+.projects-slider:hover .projects-track {
+  animation-play-state: paused;
+}
+
+
+/* Infinite movement */
+
+@keyframes projectInfiniteScroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+
+/* Slightly slower on mobile */
+
+@media (max-width: 640px) {
+  .projects-track {
+    gap: 1rem;
+    animation-duration: 48s;
+  }
+}
+
+
+@keyframes previewFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.985);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

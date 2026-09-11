@@ -227,82 +227,165 @@ const Icon = ({ name, className = "w-4 h-4", ...props }) => {
 
 const SHOWCASE_PROJECTS = [
   {
-    id: "media",
-    appName: "Media",
-    title: "Media",
-    category: "WEB APPLICATION",
-    tagline:
-      "A modern web application built to deliver a complete digital experience.",
-    description:
-      "A full-stack project developed with a focus on responsive design, practical functionality, and a smooth user experience.",
-    badgeColor: "bg-[#93cbfb]",
-    metrics: [
-      "Responsive Interface",
-      "Full Stack Application",
-      "Real-World Project",
-    ],
-    tech: ["React", "Node.js", "Express", "Database"],
-    stats: { stars: "—", forks: "—" },
-    env: "Web Application",
-    buildTool: "Vite",
-  },
-
-  {
-    id: "oxql",
-    appName: "OXQL",
-    title: "OXQL",
-    category: "SOFTWARE PROJECT",
-    tagline: "A project focused on building a practical software solution.",
-    description:
-      "A software project developed as part of my journey in application development, focusing on functionality, problem solving, and implementation.",
-    badgeColor: "bg-[#a7f3d0]",
-    metrics: [
-      "Software Application",
-      "Problem Solving",
-      "Responsive Development",
-    ],
-    tech: ["React", "Node.js", "JavaScript", "Database"],
-    stats: { stars: "—", forks: "—" },
-    env: "Web Application",
-    buildTool: "Vite",
-  },
-
-  {
-    id: "avalon",
-    appName: "Avalon",
-    title: "Avalon",
-    category: "FINAL YEAR PROJECT",
-    tagline: "My final year project built to solve a real-world problem.",
-    description:
-      "Avalon is my final year project, developed during my engineering graduation with a focus on creating a complete and practical software solution.",
-    badgeColor: "bg-[#c7d2fe]",
-    metrics: [
-      "Final Year Project",
-      "Full Stack Development",
-      "Real-World Solution",
-    ],
-    tech: ["React", "Node.js", "Express", "Database"],
-    stats: { stars: "—", forks: "—" },
-    env: "Web Application",
-    buildTool: "Vite",
-  },
-
-  {
     id: "yoga-stories",
     appName: "Yoga Stories",
     title: "Yoga Stories",
+    type: "live",
+    url: "https://yogastories.vercel.app/",
     category: "BOOKING PLATFORM",
+
     tagline: "A personal organization and class booking platform.",
+
     description:
       "A full-stack platform designed for managing yoga classes and bookings, with a focus on a simple user experience and practical organization.",
+
+    tabletPreview: {
+      type: "video",
+      src: "../public/previews/yoga-stories.mp4",
+    },
+
+    mobilePreview: {
+      type: "image",
+      src: "../public/previews/yoga-stories-mobile.png",
+    },
+
     badgeColor: "bg-[#fef08a]",
+
     metrics: [
       "Booking Platform",
       "Responsive Interface",
       "Full Stack Application",
     ],
+
     tech: ["React", "Node.js", "Express", "MongoDB"],
-    stats: { stars: "—", forks: "—" },
+
+    stats: {
+      stars: "—",
+      forks: "—",
+    },
+
+    env: "Web Application",
+    buildTool: "Vite",
+  },
+
+  {
+    id: "oxduel",
+    appName: "OxDuel",
+    title: "OxDuel",
+    type: "live",
+    url: "https://oxduel.site/",
+    category: "MULTIPLAYER WEB APPLICATION",
+
+    tagline: "An interactive multiplayer web application.",
+
+    description:
+      "A live multiplayer web application built around an interactive gaming experience.",
+
+    tabletPreview: {
+      type: "image",
+      src: "../public/previews/oxduel.png",
+    },
+
+    mobilePreview: {
+      type: "image",
+      src: "../public/previews/oxduel-mobile.png",
+    },
+
+    badgeColor: "bg-[#a7f3d0]",
+
+    metrics: [
+      "Interactive Web Application",
+      "Multiplayer Experience",
+      "Responsive Interface",
+    ],
+
+    tech: [],
+
+    stats: {
+      stars: "—",
+      forks: "—",
+    },
+
+    env: "Web Application",
+    buildTool: "Vite",
+  },
+
+  {
+    id: "evalon",
+    appName: "Evalon",
+    title: "Evalon",
+    type: "live",
+    url: "https://evalonsystems.vercel.app/",
+    category: "SOFTWARE PROJECT",
+
+    tagline: "A complete software project built around a practical solution.",
+
+    description:
+      "A software project developed with a focus on creating a practical, usable, and complete digital solution.",
+
+    tabletPreview: {
+      type: "image",
+      src: "../public/previews/evalon.png",
+    },
+
+    mobilePreview: {
+      type: "image",
+      src: "../public/previews/evalon-mobile.png",
+    },
+
+    badgeColor: "bg-[#c7d2fe]",
+
+    metrics: [
+      "Software Application",
+      "Full Stack Development",
+      "Practical Solution",
+    ],
+
+    tech: [],
+
+    stats: {
+      stars: "—",
+      forks: "—",
+    },
+
+    env: "Web Application",
+    buildTool: "Vite",
+  },
+
+  {
+    id: "infinity-ai-pro",
+    appName: "Infinity AI Pro",
+    title: "Infinity AI Pro",
+    type: "image",
+    url: null,
+    category: "AI PROJECT",
+
+    tagline: "An AI-focused project built around practical functionality.",
+
+    description:
+      "A project focused on exploring and building practical software experiences around AI.",
+
+    tabletPreview: {
+      type: "image",
+      src: "../public/previews/infinity-ai-pro.png",
+    },
+
+    mobilePreview: {
+      type: "image",
+      src: "../public/previews/infinity-ai-pro.png",
+    },
+
+    badgeColor: "bg-[#93cbfb]",
+
+    metrics: ["AI Project", "Software Development", "Practical Application"],
+
+    tech: [],
+
+    stats: {
+      stars: "—",
+      forks: "—",
+    },
+
     env: "Web Application",
     buildTool: "Vite",
   },
@@ -311,73 +394,90 @@ const SHOWCASE_PROJECTS = [
 const PROCESS_STEPS = [
   {
     step: "01",
-    phase: "PHASE 01 • ANALYSIS",
-    title: "Research & Discovery",
+    phase: "PHASE 01 • UNDERSTAND",
+    title: "Understand the Problem",
     description:
-      "Framing architectural constraints, analyzing target user behaviors, validating data flows, and establishing clear engineering success criteria.",
+      "Understanding the requirements, identifying the problem to solve, and defining what the application needs to achieve before development begins.",
     image:
-      "https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&w=800&q=80",
-    tags: ["User Scenarios", "Feasibility Specs", "KPI Targets"],
+      "https://es-blog.files.wordpress.com/2025/11/disenar-con-ia-iterar.png",
+    tags: ["Requirements", "Problem Analysis", "User Needs"],
   },
+
   {
     step: "02",
-    phase: "PHASE 02 • BLUEPRINT",
-    title: "Wireframe & Planning",
+    phase: "PHASE 02 • PLAN",
+    title: "Plan & Design",
     description:
-      "Constructing information architecture, low-fidelity user flows, state transition charts, and resilient database schemas before writing code.",
+      "Planning the application structure, user flow, database, and interface to create a clear direction before writing the main code.",
     image:
-      "https://images.unsplash.com/photo-1542744094-3a31f272c490?auto=format&fit=crop&w=800&q=80",
-    tags: ["Schema Design", "IA Wireframes", "State Trees"],
+      "https://aostasoftware.com/wp-content/uploads/2025/01/Illustration.png",
+    tags: ["UI Planning", "User Flow", "Database Design"],
   },
+
   {
     step: "03",
-    phase: "PHASE 03 • EXECUTION",
-    title: "Design & Development",
+    phase: "PHASE 03 • BUILD",
+    title: "Develop the Solution",
     description:
-      "Translating design tokens into clean, modular React/TypeScript components backed by low-latency, resilient API microservices.",
+      "Building the frontend, backend, APIs, and database while focusing on responsive interfaces, practical functionality, and maintainable code.",
     image:
-      "https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?auto=format&fit=crop&w=800&q=80",
-    tags: ["React & TS", "Design Tokens", "REST & GraphQL"],
+      "https://unsplash.com/illustrations/team-working-on-seo-strategy-and-development-63fOcZH7-rk.png",
+    tags: ["Frontend", "Backend", "APIs"],
   },
+
   {
     step: "04",
-    phase: "PHASE 04 • PRODUCTION",
-    title: "Testing & Deployment",
+    phase: "PHASE 04 • TEST",
+    title: "Test & Improve",
     description:
-      "Automated Vitest/Playwright test suites, cloud edge deployments, zero-downtime database migrations, and live telemetry observability.",
+      "Testing the application, identifying issues, improving the user experience, and making sure the final product works reliably across different devices.",
+    image: "https://sdettech.com/services/service1.png",
+    tags: ["Testing", "Bug Fixing", "Deployment"],
+  },
+];
+
+const PROJECTS = [
+  {
+    number: "01",
+    title: "MEDIA",
+    category: "WEB APPLICATION",
+    description:
+      "A modern web application built to provide a practical and engaging digital experience.",
     image:
-      "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=800&q=80",
-    tags: ["Vitest / E2E", "Edge CI/CD", "99.99% Uptime"],
+      "https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=1200&q=80",
+    tags: ["Frontend", "Backend", "Database"],
+  },
+  {
+    number: "02",
+    title: "OXQL",
+    category: "SOFTWARE PROJECT",
+    description:
+      "A software project focused on solving a practical problem through a structured and user-friendly application.",
+    image:
+      "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1200&q=80",
+    tags: ["React", "APIs", "Database"],
+  },
+  {
+    number: "03",
+    title: "AVALON",
+    category: "FINAL YEAR PROJECT",
+    description:
+      "A final year project developed as a complete software solution with a focus on functionality, usability, and implementation.",
+    image:
+      "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80",
+    tags: ["Full Stack", "Web App", "Development"],
+  },
+  {
+    number: "04",
+    title: "YOGA STORIES",
+    category: "BOOKING PLATFORM",
+    description:
+      "A platform designed to organize yoga classes and provide users with a simple way to explore and book sessions.",
+    image:
+      "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=1200&q=80",
+    tags: ["React", "Node.js", "Booking"],
   },
 ];
-
-const TESTIMONIALS = [
-  {
-    quote:
-      "Alex brought unprecedented speed and precision to our product launch. He designed our entire UI system and executed the full-stack backend with 99.99% uptime.",
-    author: "Sarah Chen",
-    role: "VP of Product, FinPulse",
-    avatar:
-      "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80",
-  },
-  {
-    quote:
-      "Rarely do you find an engineer who is equally exceptional at Figma ergonomics and high-throughput PostgreSQL indexing. Alex made our app feel Apple-grade.",
-    author: "Marcus Brody",
-    role: "CTO, Hyperion Labs",
-    avatar:
-      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&q=80",
-  },
-  {
-    quote:
-      "Working with Alex was a breath of fresh air. Clear timelines, zero technical debt, and a gorgeous user interface that our customers rave about constantly.",
-    author: "Elena Rostova",
-    role: "Founder & CEO, Veritas",
-    avatar:
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=150&q=80",
-  },
-];
-
 function AnimatedCounter({ target, prefix = "", decimals = 0 }) {
   const [val, setVal] = useState(0);
   const elemRef = useRef(null);
@@ -427,11 +527,119 @@ function AnimatedCounter({ target, prefix = "", decimals = 0 }) {
   return <span ref={elemRef}>{displayStr}</span>;
 }
 
+function ProjectPreview({ preview, title }) {
+  if (!preview) {
+    return (
+      <div className="w-full h-full bg-slate-100 flex items-center justify-center">
+        <span className="text-[10px] font-mono uppercase tracking-widest text-slate-400">
+          Preview unavailable
+        </span>
+      </div>
+    );
+  }
+
+  if (preview.type === "video") {
+    return (
+      <video
+        src={preview.src}
+        autoPlay
+        muted
+        loop
+        playsInline
+        
+        preload="metadata"
+        aria-label={`${title} preview`}
+        className="w-full h-full object-cover"
+      />
+    );
+  }
+
+  return (
+    <img
+      src={preview.src}
+      alt={`${title} preview`}
+      loading="eager"
+      className="w-full h-full object-cover"
+    />
+  );
+}
+
+function LiveProjectPreview({ url, title, mode = "tablet" }) {
+  const [loaded, setLoaded] = useState(false);
+  const [failed, setFailed] = useState(false);
+
+  useEffect(() => {
+    setLoaded(false);
+    setFailed(false);
+  }, [url]);
+
+  if (!url) {
+    return (
+      <div className="w-full h-full bg-slate-950 flex items-center justify-center text-white">
+        <span className="text-[10px] uppercase tracking-widest text-white/40">
+          Preview unavailable
+        </span>
+      </div>
+    );
+  }
+
+  return (
+    <div className="relative w-full h-full overflow-hidden bg-white">
+      {/* Loading */}
+      {!loaded && !failed && (
+        <div className="absolute inset-0 z-30 flex flex-col items-center justify-center bg-slate-950 text-white">
+          <div className="w-6 h-6 border-2 border-white/20 border-t-white rounded-full animate-spin mb-3" />
+
+          <span className="text-[9px] tracking-[0.18em] uppercase text-white/50">
+            Loading {title}
+          </span>
+        </div>
+      )}
+
+      {/* Fallback */}
+      {failed && (
+        <div className="absolute inset-0 z-30 flex flex-col items-center justify-center bg-slate-950 text-white px-6 text-center">
+          <span className="text-xs font-medium mb-2">Preview unavailable</span>
+
+          <span className="text-[10px] text-white/50 mb-4">
+            Open the project directly to explore it.
+          </span>
+
+          <a
+            href={url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-4 py-2 rounded-full bg-white text-slate-950 text-[10px] font-semibold"
+          >
+            Open Project ↗
+          </a>
+        </div>
+      )}
+
+      {/* Live Website */}
+      {!failed && (
+        <iframe
+          key={url}
+          src={url}
+          title={`${title} ${mode} live preview`}
+          loading="eager"
+          allow="fullscreen"
+          onLoad={() => setLoaded(true)}
+          onError={() => setFailed(true)}
+          className={`absolute inset-0 w-full h-full border-0 bg-white transition-opacity duration-500 ${
+            loaded ? "opacity-100" : "opacity-0"
+          }`}
+        />
+      )}
+    </div>
+  );
+}
+
 export default function App() {
   const [scrollPercent, setScrollPercent] = useState(0);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeProjectIdx, setActiveProjectIdx] = useState(0);
-  const [activeTestimonialIdx, setActiveTestimonialIdx] = useState(0);
+  const [previewOpen, setPreviewOpen] = useState(false);
   const [selectedCaseModal, setSelectedCaseModal] = useState(null);
   const [isContactModalOpen, setIsContactModalOpen] = useState(false);
   const [toastMessage, setToastMessage] = useState(null);
@@ -478,12 +686,6 @@ export default function App() {
     };
   }, []);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setActiveTestimonialIdx((prev) => (prev + 1) % TESTIMONIALS.length);
-    }, 5500);
-    return () => clearInterval(interval);
-  }, []);
   // Animations useEffect
 
   useEffect(() => {
@@ -555,6 +757,10 @@ export default function App() {
   };
 
   const currentProject = SHOWCASE_PROJECTS[activeProjectIdx];
+
+  const mobileScale = 0.90;
+const mobileRight = -20;
+const mobileBottom = 0;
 
   return (
     <div className="bg-slate-100 text-slate-900 font-sans antialiased min-h-screen selection:bg-[#ffe600] selection:text-black overflow-x-hidden">
@@ -1074,24 +1280,28 @@ lg:[-webkit-mask-image:none]
 
               <div className="flex items-center gap-2 sm:gap-3">
                 <button
-                  onClick={() =>
+                  onClick={() => {
+                    setPreviewOpen(false);
+
                     setActiveProjectIdx(
                       (prev) =>
                         (prev - 1 + SHOWCASE_PROJECTS.length) %
                         SHOWCASE_PROJECTS.length,
-                    )
-                  }
+                    );
+                  }}
                   className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white/10 hover:bg-[#ffe600] hover:text-slate-950 text-white flex items-center justify-center transition-all active:scale-95"
                   aria-label="Previous Project"
                 >
                   <Icon name="arrow-left" className="w-4 h-4" />
                 </button>
                 <button
-                  onClick={() =>
+                  onClick={() => {
+                    setPreviewOpen(false);
+
                     setActiveProjectIdx(
                       (prev) => (prev + 1) % SHOWCASE_PROJECTS.length,
-                    )
-                  }
+                    );
+                  }}
                   className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-[#ffe600] text-slate-950 hover:bg-white hover:text-[#4162ff] flex items-center justify-center transition-all active:scale-95 shadow-md"
                   aria-label="Next Project"
                 >
@@ -1104,188 +1314,145 @@ lg:[-webkit-mask-image:none]
                   <span>View Spec</span>
                   <Icon name="external-link" className="w-3.5 h-3.5" />
                 </button>
+                {currentProject.type === "live" && !previewOpen && (
+                  <button
+                    onClick={() => setPreviewOpen(true)}
+                    className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-[#ffe600] text-slate-950 text-xs font-['Oswald',sans-serif] uppercase tracking-wider font-bold hover:bg-white transition-all duration-300 active:scale-95 shadow-md"
+                  >
+                    <span>Open Preview</span>
+
+                    <Icon name="arrow-up-right" className="w-3.5 h-3.5" />
+                  </button>
+                )}
+
+                {previewOpen && (
+                  <button
+                    onClick={() => setPreviewOpen(false)}
+                    className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-white/10 hover:bg-white/20 text-white text-xs font-['Oswald',sans-serif] uppercase tracking-wider transition-all duration-300"
+                  >
+                    <span>Close Preview</span>
+
+                    <Icon name="x" className="w-3.5 h-3.5" />
+                  </button>
+                )}
               </div>
             </div>
 
             {/* Dual Device Emulator Stage */}
             <div className="relative py-6 sm:py-10 flex justify-center items-center">
               {/* Tablet Frame */}
-              <div className="w-full max-w-4xl bg-slate-900 border-[6px] sm:border-[10px] border-slate-800 rounded-[24px] sm:rounded-[32px] shadow-2xl overflow-hidden relative">
-                {/* Screen Canvas */}
-                <div className="bg-slate-100 text-slate-900 grid grid-cols-1 md:grid-cols-12 min-h-[360px] sm:min-h-[440px]">
-                  {/* Left Column: App Summary */}
+              {/* Tablet Frame */}
+              {/* <div className="w-full max-w-4xl bg-slate-900 border-[6px] sm:border-[10px] border-slate-800 rounded-[24px] sm:rounded-[32px] shadow-2xl overflow-hidden relative">
+                <div className="h-[360px] sm:h-[440px] bg-white">
+                  {currentProject.type === "live" ? (
+                    <LiveProjectPreview
+                      url={currentProject.url}
+                      title={currentProject.title}
+                      mode="tablet"
+                    />
+                  ) : (
+                    <img
+                      src={currentProject.image}
+                      alt={currentProject.title}
+                      className="w-full h-full object-cover"
+                    />
+                  )}
+                </div>
+              </div> */}
+              {/* <div className="w-full max-w-6xl bg-slate-900 border-[6px] sm:border-[10px] border-slate-800 rounded-[24px] sm:rounded-[32px] shadow-2xl overflow-hidden relative">
+                <div className="h-[440px] sm:h-[560px] lg:h-[620px] bg-white">
+                  {currentProject.type === "live" ? (
+                    <LiveProjectPreview
+                      url={currentProject.url}
+                      title={currentProject.title}
+                      mode="tablet"
+                    />
+                  ) : (
+                    <img
+                      src={currentProject.image}
+                      alt={currentProject.title}
+                      className="w-full h-full object-cover"
+                    />
+                  )}
+                </div>
+              </div> */}
+              <div className="w-full max-w-6xl bg-slate-900 border-[6px] sm:border-[10px] border-slate-800 rounded-[24px] sm:rounded-[32px] shadow-2xl overflow-hidden relative transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)]">
+                <div className="h-[440px] sm:h-[560px] lg:h-[620px] bg-white relative overflow-hidden">
                   <div
-                    className={`md:col-span-5 ${currentProject.badgeColor} p-5 sm:p-6 flex flex-col justify-between text-slate-950`}
+                    className={`absolute inset-0 transition-opacity duration-500 ${
+                      previewOpen ? "opacity-0" : "opacity-100"
+                    }`}
                   >
-                    <div>
-                      <div className="flex items-center justify-between mb-3">
-                        <div className="flex items-center gap-2 font-['Oswald',sans-serif] text-lg font-bold uppercase">
-                          <span className="text-xl">⚛</span>
-                          <span>{currentProject.appName}</span>
-                        </div>
-                        <span className="w-6 h-6 rounded-full bg-white/40 flex items-center justify-center text-xs">
-                          ⚙
-                        </span>
-                      </div>
-
-                      <h4 className="font-['Oswald',sans-serif] text-base font-bold leading-snug mb-2 text-slate-950">
-                        {currentProject.tagline}
-                      </h4>
-                      <p className="text-xs text-slate-800 leading-relaxed mb-4">
-                        {currentProject.description}
-                      </p>
-                    </div>
-
-                    <div className="bg-white/90 backdrop-blur rounded-xl p-3 shadow-sm border border-white/60 text-slate-800 text-xs space-y-1.5">
-                      <div className="font-['Oswald',sans-serif] uppercase font-bold text-sky-800 text-[10px] tracking-wider">
-                        Instructions
-                      </div>
-                      <div>
-                        <span className="font-bold text-slate-950">
-                          Step 1:
-                        </span>{" "}
-                        Choose config in right panel.
-                      </div>
-                      <div>
-                        <span className="font-bold text-slate-950">
-                          Step 2:
-                        </span>{" "}
-                        Click Create App to compile.
-                      </div>
-                      <div>
-                        <span className="font-bold text-slate-950">
-                          Step 3:
-                        </span>{" "}
-                        Execute generated script.
-                      </div>
-                    </div>
+                    <ProjectPreview
+                      preview={currentProject.tabletPreview}
+                      title={currentProject.title}
+                    />
                   </div>
 
-                  {/* Right Column: Setup Your App Form Panel */}
-                  <div className="md:col-span-7 bg-white p-5 sm:p-7 flex flex-col justify-between">
-                    <div>
-                      <div className="flex flex-wrap items-center justify-between gap-2 pb-3 border-b border-slate-100">
-                        <div className="flex items-center gap-2 font-['Oswald',sans-serif] uppercase text-sm font-bold text-slate-900">
-                          <span>⚙</span>
-                          <span>Setup Your App</span>
-                        </div>
-                        <div className="flex items-center gap-1.5 text-[10px] font-mono">
-                          <span className="px-2 py-0.5 rounded bg-slate-100 border border-slate-200">
-                            ★ Star {currentProject.stats.stars}
-                          </span>
-                          <span className="px-2 py-0.5 rounded bg-slate-100 border border-slate-200">
-                            ⑂ Fork {currentProject.stats.forks}
-                          </span>
-                        </div>
-                      </div>
-
-                      <div className="pt-4 space-y-3 text-xs">
-                        <div className="flex items-center justify-between">
-                          <span className="text-slate-600 font-medium">
-                            Environment
-                          </span>
-                          <span className="px-2.5 py-1 rounded bg-slate-100 font-mono text-[11px] font-semibold text-slate-800 border border-slate-200">
-                            {currentProject.env}
-                          </span>
-                        </div>
-                        <div className="flex items-center justify-between">
-                          <span className="text-slate-600 font-medium">
-                            Build Tool
-                          </span>
-                          <span className="px-2.5 py-1 rounded bg-slate-100 font-mono text-[11px] font-semibold text-slate-800 border border-slate-200">
-                            {currentProject.buildTool}
-                          </span>
-                        </div>
-                        <div className="flex items-center justify-between">
-                          <span className="text-slate-600 font-medium">
-                            Project Name
-                          </span>
-                          <span className="px-2.5 py-1 rounded bg-slate-50 font-mono text-[11px] text-slate-700 border border-slate-200">
-                            my-{currentProject.id}
-                          </span>
-                        </div>
-                        <div className="flex items-center justify-between">
-                          <span className="text-slate-600 font-medium">
-                            Routing Engine
-                          </span>
-                          <span className="flex items-center gap-1 text-emerald-600 font-mono text-[11px] font-semibold">
-                            <span className="w-3.5 h-3.5 rounded bg-emerald-500 text-white flex items-center justify-center text-[9px]">
-                              ✓
-                            </span>
-                            <span>Enabled</span>
-                          </span>
-                        </div>
-                      </div>
+                  {previewOpen && currentProject.type === "live" && (
+                    <div className="absolute inset-0 animate-[previewFadeIn_500ms_ease-out]">
+                      <LiveProjectPreview
+                        url={currentProject.url}
+                        title={currentProject.title}
+                        mode="tablet"
+                      />
                     </div>
-
-                    <div className="pt-4 flex items-center justify-between border-t border-slate-100 mt-4">
-                      <button
-                        onClick={() =>
-                          triggerToast(
-                            `App boilerplated for ${currentProject.appName}!`,
-                          )
-                        }
-                        className="px-5 py-2 rounded-xl bg-[#4162ff] text-white font-['Oswald',sans-serif] uppercase text-xs font-bold tracking-wider hover:bg-blue-700 shadow-md transition-all active:scale-95"
-                      >
-                        Create App
-                      </button>
-                      <span className="text-[11px] font-mono text-emerald-600 font-medium flex items-center gap-1">
-                        <span className="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span>{" "}
-                        Ready to build
-                      </span>
-                    </div>
-                  </div>
+                  )}
                 </div>
               </div>
 
               {/* Overlapping Phone Mockup */}
-              <div className="hidden sm:block absolute -right-2 md:right-4 lg:right-10 bottom-0 md:-bottom-3 w-[190px] md:w-[220px] bg-slate-900 border-[5px] sm:border-[7px] border-slate-800 rounded-[28px] sm:rounded-[32px] shadow-2xl overflow-hidden z-20 hover:scale-105 transition-transform duration-300">
-                <div className="w-14 h-2.5 bg-slate-800 rounded-full mx-auto my-1.5"></div>
+        {/* ================= MOBILE PHONE ================= */}
 
-                <div
-                  className={`${currentProject.badgeColor} p-3 text-slate-950 min-h-[300px] md:min-h-[350px] flex flex-col justify-between text-left`}
-                >
-                  <div>
-                    <div className="flex items-center gap-1 font-['Oswald',sans-serif] text-xs font-bold uppercase mb-1">
-                      <span>⚛</span>
-                      <span>{currentProject.appName}</span>
-                    </div>
-                    <div className="text-[10px] font-bold leading-tight mb-2">
-                      {currentProject.tagline}
-                    </div>
-                    <p className="text-[9px] text-slate-800 leading-normal mb-2">
-                      Quickly compile components with preferred functional arrow
-                      syntax.
-                    </p>
-                  </div>
+{/* EASY MOBILE PHONE CONTROLS
+    Change these 3 values to adjust it:
+    mobileScale  → overall size
+    mobileRight  → move left/right
+    mobileBottom → move up/down
+*/}
 
-                  <div className="bg-white/95 rounded-lg p-2 shadow-sm text-[9px] text-slate-800 space-y-0.5">
-                    <div className="font-['Oswald',sans-serif] uppercase font-bold text-sky-800 text-[9px]">
-                      Instructions
-                    </div>
-                    <div>
-                      <span className="font-bold">1:</span> Set config
-                    </div>
-                    <div>
-                      <span className="font-bold">2:</span> Tap generate
-                    </div>
-                    <div>
-                      <span className="font-bold">3:</span> Run script
-                    </div>
-                  </div>
 
-                  <button
-                    onClick={() =>
-                      triggerToast(
-                        `Compiled mobile profile for ${currentProject.appName}!`,
-                      )
-                    }
-                    className="w-full py-1.5 rounded-lg bg-slate-950 text-white text-center font-['Oswald',sans-serif] text-[10px] uppercase font-bold tracking-wider hover:bg-slate-800 transition-colors"
-                  >
-                    Generate App
-                  </button>
-                </div>
-              </div>
+<div
+  className={`hidden sm:block absolute z-20
+    w-[260px] md:w-[300px] lg:w-[320px]
+    bg-slate-900
+    border-[5px] sm:border-[7px] border-slate-800
+    rounded-[28px] sm:rounded-[32px]
+    shadow-2xl
+    overflow-hidden
+    transition-all duration-700
+    ease-[cubic-bezier(0.22,1,0.36,1)]
+    ${
+      previewOpen
+        ? "opacity-0 pointer-events-none"
+        : "opacity-100"
+    }
+  `}
+  style={{
+    right: `${mobileRight}px`,
+    bottom: `${mobileBottom}px`,
+    transform: `scale(${mobileScale})`,
+    transformOrigin: "bottom right",
+  }}
+  onMouseEnter={(e) => {
+    e.currentTarget.style.transform = `scale(${mobileScale * 1.05})`;
+  }}
+  onMouseLeave={(e) => {
+    e.currentTarget.style.transform = `scale(${mobileScale})`;
+  }}
+>
+  {/* Phone speaker / notch */}
+  <div className="w-14 h-2.5 bg-slate-800 rounded-full mx-auto my-1.5" />
+
+  {/* Mobile screen */}
+  <div className="relative w-full h-[480px] md:h-[540px] overflow-hidden bg-white">
+    <ProjectPreview
+      key={`${currentProject.id}-mobile`}
+      preview={currentProject.mobilePreview}
+      title={currentProject.title}
+    />
+  </div>
+</div>
             </div>
 
             {/* Bottom Showcase Thumbnail Selector */}
@@ -1301,7 +1468,10 @@ lg:[-webkit-mask-image:none]
                 {SHOWCASE_PROJECTS.map((proj, idx) => (
                   <button
                     key={proj.id}
-                    onClick={() => setActiveProjectIdx(idx)}
+                    onClick={() => {
+                      setPreviewOpen(false);
+                      setActiveProjectIdx(idx);
+                    }}
                     className={`text-left p-2.5 rounded-xl transition-all duration-300 ${
                       idx === activeProjectIdx
                         ? "bg-white/20 ring-2 ring-[#ffe600] shadow-lg"
@@ -1330,32 +1500,22 @@ lg:[-webkit-mask-image:none]
         <div className="max-w-7xl mx-auto">
           <div className="mb-10 reveal-elem">
             <h2 className="font-['Bebas_Neue',sans-serif] text-4xl sm:text-6xl uppercase tracking-tight text-white">
-              My Work Experience
+              My Journey
             </h2>
             <div className="h-1 w-16 bg-[#ffe600] mt-2 rounded-full"></div>
           </div>
 
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-10">
-            <div className="border-l-4 border-[#ffe600] pl-4 sm:pl-6 reveal-elem">
-              <div className="font-['Bebas_Neue',sans-serif] text-4xl sm:text-6xl lg:text-7xl font-bold flex items-baseline">
-                <AnimatedCounter target={7} prefix="0" />
-                <span className="text-[#ffe600]">+</span>
-              </div>
-              <div className="font-['Oswald',sans-serif] uppercase text-xs sm:text-sm tracking-widest text-white/80 mt-1">
-                Years Experience
-              </div>
-            </div>
-
             <div
               className="border-l-4 border-[#ffe600] pl-4 sm:pl-6 reveal-elem"
               style={{ transitionDelay: "100ms" }}
             >
               <div className="font-['Bebas_Neue',sans-serif] text-4xl sm:text-6xl lg:text-7xl font-bold flex items-baseline">
-                <AnimatedCounter target={270} />
+                <AnimatedCounter target={4} prefix="0" />
                 <span className="text-[#ffe600]">+</span>
               </div>
               <div className="font-['Oswald',sans-serif] uppercase text-xs sm:text-sm tracking-widest text-white/80 mt-1">
-                Projects Completed
+                Featured Projects
               </div>
             </div>
 
@@ -1364,11 +1524,21 @@ lg:[-webkit-mask-image:none]
               style={{ transitionDelay: "200ms" }}
             >
               <div className="font-['Bebas_Neue',sans-serif] text-4xl sm:text-6xl lg:text-7xl font-bold flex items-baseline">
-                <AnimatedCounter target={12} />
+                <AnimatedCounter target={9.0} decimals={1} />
                 <span className="text-[#ffe600]">+</span>
               </div>
               <div className="font-['Oswald',sans-serif] uppercase text-xs sm:text-sm tracking-widest text-white/80 mt-1">
-                Industry Awards
+                CGPA
+              </div>
+            </div>
+
+            <div className="border-l-4 border-[#ffe600] pl-4 sm:pl-6 reveal-elem">
+              <div className="font-['Bebas_Neue',sans-serif] text-4xl sm:text-6xl lg:text-7xl font-bold flex items-baseline">
+                <AnimatedCounter target={2026} prefix="" />
+                <span className="text-[#ffe600]">.</span>
+              </div>
+              <div className="font-['Oswald',sans-serif] uppercase text-xs sm:text-sm tracking-widest text-white/80 mt-1">
+                Graduate
               </div>
             </div>
 
@@ -1377,11 +1547,11 @@ lg:[-webkit-mask-image:none]
               style={{ transitionDelay: "300ms" }}
             >
               <div className="font-['Bebas_Neue',sans-serif] text-4xl sm:text-6xl lg:text-7xl font-bold text-[#ffe600] flex items-baseline">
-                <AnimatedCounter target={4.8} decimals={1} />
-                <span className="text-white text-2xl sm:text-3xl ml-1">★</span>
+                <AnimatedCounter target={99.8} decimals={1} />
+                <span className="text-white text-2xl sm:text-3xl ml-1">%</span>
               </div>
               <div className="font-['Oswald',sans-serif] uppercase text-xs sm:text-sm tracking-widest text-white/80 mt-1">
-                Client Satisfaction
+                Commitment
               </div>
             </div>
           </div>
@@ -1482,70 +1652,326 @@ lg:[-webkit-mask-image:none]
       </section>
 
       {}
-      <section className="py-16 sm:py-24 px-5 sm:px-8 md:px-12 lg:px-16 bg-slate-50 border-y border-slate-200">
+      {/* ================= PROJECTS ================= */}
+      {/* ================= PROJECTS ================= */}
+      <section
+        id="projects"
+        className="relative overflow-hidden py-20 sm:py-24 px-5 sm:px-8 md:px-12 lg:px-16 bg-slate-50 border-y border-slate-200"
+      >
         <div className="max-w-7xl mx-auto">
-          <div className="flex items-center justify-between mb-10 reveal-elem">
+          {/* ================= HEADER ================= */}
+          <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6 mb-10 sm:mb-12 reveal-elem">
             <div>
-              <h2 className="font-['Bebas_Neue',sans-serif] text-4xl sm:text-6xl uppercase tracking-tight text-slate-900">
-                Testimonials
+              <div className="flex items-center gap-3 mb-3">
+                <span className="font-mono text-[10px] sm:text-xs tracking-[0.25em] text-[#4162ff]">
+                  04 / WORK
+                </span>
+
+                <span className="h-px w-8 sm:w-10 bg-[#4162ff]/40"></span>
+              </div>
+
+              <h2 className="font-['Bebas_Neue',sans-serif] text-5xl sm:text-6xl lg:text-7xl uppercase tracking-tight text-slate-900 leading-none">
+                Selected Projects
               </h2>
-              <div className="h-1.5 w-16 sm:w-20 bg-[#4162ff] mt-2 rounded-full"></div>
+
+              <div className="h-1.5 w-16 sm:w-20 bg-[#4162ff] mt-3 rounded-full"></div>
             </div>
 
-            {/* Interactive Yellow Slider Dots */}
-            <div className="flex items-center gap-2">
-              {TESTIMONIALS.map((_, i) => (
-                <button
-                  key={i}
-                  onClick={() => setActiveTestimonialIdx(i)}
-                  className={`rounded-full transition-all duration-300 ${
-                    i === activeTestimonialIdx
-                      ? "w-4 h-4 bg-[#ffe600] scale-110 shadow-sm ring-2 ring-slate-900/10"
-                      : "w-3.5 h-3.5 bg-slate-300 hover:bg-[#ffe600]"
-                  }`}
-                  aria-label={`Go to testimonial ${i + 1}`}
-                />
-              ))}
+            <div className="flex items-center gap-3 text-slate-400">
+              <span className="font-mono text-[10px] uppercase tracking-[0.2em]">
+                Scroll to explore
+              </span>
+
+              <span className="text-lg animate-pulse">→</span>
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
-            {TESTIMONIALS.map((item, idx) => (
-              <div
-                key={idx}
-                className={`reveal-elem p-6 sm:p-8 rounded-2xl bg-white border border-slate-200 shadow-sm flex flex-col justify-between transition-all duration-300 ${
-                  idx === activeTestimonialIdx
-                    ? "ring-2 ring-[#4162ff] shadow-md scale-[1.01]"
-                    : "opacity-90"
-                }`}
-                style={{ transitionDelay: `${idx * 100}ms` }}
-              >
-                <p className="text-slate-700 text-xs sm:text-sm leading-relaxed mb-6 italic">
-                  "{item.quote}"
-                </p>
-                <div className="flex items-center gap-3 pt-4 border-t border-slate-100">
-                  <img
-                    src={item.avatar}
-                    alt={item.author}
-                    className="w-11 h-11 rounded-full object-cover border-2 border-[#4162ff] shadow-sm"
-                  />
-                  <div>
-                    <div className="font-['Oswald',sans-serif] uppercase font-bold text-xs sm:text-sm text-slate-900">
-                      {item.author}
+          {/* ================= HORIZONTAL PROJECT RAIL ================= */}
+          {/* ================= INFINITE PROJECT SLIDER ================= */}
+          <div className="projects-slider-wrapper reveal-elem">
+            <div className="projects-slider">
+              <div className="projects-track">
+                {[...PROJECTS, ...PROJECTS].map((project, idx) => (
+                  <article
+                    key={`${project.number}-${idx}`}
+                    className="
+            project-card
+            group
+            relative
+            flex-none
+            w-[78vw]
+            sm:w-[48vw]
+            md:w-[36vw]
+            lg:w-[30vw]
+            xl:w-[28vw]
+            max-w-[420px]
+            overflow-hidden
+            rounded-2xl
+            bg-white
+            border
+            border-slate-200
+            shadow-sm
+            transition-all
+            duration-500
+            hover:-translate-y-2
+            hover:shadow-xl
+          "
+                  >
+                    {/* ================= IMAGE ================= */}
+                    <div className="relative aspect-[16/9] overflow-hidden bg-slate-100">
+                      <img
+                        src={project.image}
+                        alt={project.title}
+                        className="
+                w-full
+                h-full
+                object-cover
+                transition-transform
+                duration-700
+                ease-[cubic-bezier(0.22,1,0.36,1)]
+                group-hover:scale-105
+              "
+                      />
+
+                      {/* Overlay */}
+                      <div
+                        className="
+                absolute
+                inset-0
+                bg-gradient-to-t
+                from-slate-950/75
+                via-slate-950/10
+                to-transparent
+                opacity-80
+                transition-opacity
+                duration-500
+                group-hover:opacity-100
+              "
+                      />
+
+                      {/* Number */}
+                      <div className="absolute top-4 left-4">
+                        <span
+                          className="
+                  inline-flex
+                  items-center
+                  justify-center
+                  min-w-10
+                  h-8
+                  px-3
+                  rounded-full
+                  bg-white/90
+                  backdrop-blur-md
+                  text-slate-900
+                  font-mono
+                  text-[10px]
+                  font-bold
+                  tracking-widest
+                "
+                        >
+                          {project.number}
+                        </span>
+                      </div>
+
+                      {/* Hover Arrow */}
+                      <div
+                        className="
+                absolute
+                top-4
+                right-4
+                w-9
+                h-9
+                rounded-full
+                bg-[#4162ff]
+                text-white
+                flex
+                items-center
+                justify-center
+                opacity-0
+                translate-y-2
+                group-hover:opacity-100
+                group-hover:translate-y-0
+                transition-all
+                duration-400
+              "
+                      >
+                        <span className="transition-transform duration-300 group-hover:rotate-45">
+                          ↗
+                        </span>
+                      </div>
+
+                      {/* Category */}
+                      <div className="absolute bottom-4 left-5">
+                        <span
+                          className="
+                  font-mono
+                  text-[9px]
+                  sm:text-[10px]
+                  tracking-[0.2em]
+                  text-white
+                  uppercase
+                "
+                        >
+                          {project.category}
+                        </span>
+                      </div>
                     </div>
-                    <div className="text-[11px] text-slate-500 font-mono">
-                      {item.role}
+
+                    {/* ================= CONTENT ================= */}
+                    <div className="p-5 sm:p-6">
+                      <div className="flex items-start justify-between gap-4">
+                        <div>
+                          <h3
+                            className="
+                    font-['Bebas_Neue',sans-serif]
+                    text-3xl
+                    sm:text-4xl
+                    uppercase
+                    tracking-tight
+                    leading-none
+                    text-slate-900
+                    transition-colors
+                    duration-300
+                    group-hover:text-[#4162ff]
+                  "
+                          >
+                            {project.title}
+                          </h3>
+
+                          <p
+                            className="
+                    mt-3
+                    text-xs
+                    sm:text-sm
+                    leading-relaxed
+                    text-slate-500
+                    line-clamp-3
+                  "
+                          >
+                            {project.description}
+                          </p>
+                        </div>
+
+                        <span
+                          className="
+                  hidden sm:block
+                  font-mono
+                  text-[10px]
+                  text-slate-300
+                  tracking-widest
+                "
+                        >
+                          /{project.number}
+                        </span>
+                      </div>
+
+                      {/* ================= TAGS ================= */}
+                      <div className="flex flex-wrap gap-1.5 mt-5">
+                        {project.tags.map((tag) => (
+                          <span
+                            key={tag}
+                            className="
+                    px-2.5
+                    py-1
+                    rounded-full
+                    border
+                    border-slate-200
+                    bg-slate-50
+                    text-[9px]
+                    sm:text-[10px]
+                    font-mono
+                    uppercase
+                    tracking-wide
+                    text-slate-500
+                    transition-all
+                    duration-300
+                    group-hover:border-[#4162ff]/30
+                    group-hover:bg-[#4162ff]/5
+                  "
+                          >
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
+
+                      {/* ================= FOOTER ================= */}
+                      <div
+                        className="
+                mt-5
+                pt-4
+                border-t
+                border-slate-100
+                flex
+                items-center
+                justify-between
+              "
+                      >
+                        <span
+                          className="
+                  font-mono
+                  text-[9px]
+                  uppercase
+                  tracking-[0.2em]
+                  text-slate-400
+                "
+                        >
+                          Project {project.number}
+                        </span>
+
+                        <button
+                          className="
+                  flex
+                  items-center
+                  gap-2
+                  text-[10px]
+                  font-bold
+                  uppercase
+                  tracking-wider
+                  text-slate-800
+                  transition-colors
+                  duration-300
+                  hover:text-[#4162ff]
+                "
+                        >
+                          View Project
+                          <span
+                            className="
+                    text-sm
+                    transition-transform
+                    duration-300
+                    group-hover:translate-x-1
+                  "
+                          >
+                            →
+                          </span>
+                        </button>
+                      </div>
                     </div>
-                  </div>
-                </div>
+                  </article>
+                ))}
               </div>
-            ))}
+            </div>
+          </div>
+
+          {/* ================= SCROLL INDICATOR ================= */}
+          <div className="mt-3 flex items-center gap-4 reveal-elem">
+            <span className="font-mono text-[9px] tracking-[0.2em] text-slate-400">
+              01
+            </span>
+
+            <div className="h-px w-24 sm:w-40 bg-slate-200 overflow-hidden">
+              <div className="h-full w-1/3 bg-[#4162ff] animate-[projectScroll_3s_ease-in-out_infinite]"></div>
+            </div>
+
+            <span className="font-mono text-[9px] tracking-[0.2em] text-slate-400">
+              04
+            </span>
           </div>
         </div>
       </section>
 
       {}
-      <section
+      {/* <section
         id="workstation"
         className="py-16 sm:py-24 px-5 sm:px-8 md:px-12 lg:px-16 bg-[#4162ff] text-white"
       >
@@ -1556,8 +1982,7 @@ lg:[-webkit-mask-image:none]
             </h2>
             <div className="h-1.5 w-16 sm:w-20 bg-[#ffe600] mt-2 rounded-full"></div>
             <p className="text-white/80 max-w-md text-xs sm:text-sm mt-2">
-              Hardware &amp; development environment tuned for sub-millisecond
-              local execution, zero-jitter previewing, and multi-device QA.
+              The tools &amp; development environment I use to design, build, test, and deploy modern web applications.
             </p>
           </div>
 
@@ -1636,6 +2061,112 @@ lg:[-webkit-mask-image:none]
             </div>
           </div>
         </div>
+      </section> */}
+      {/* ================= WORKSTATION ================= */}
+      <section
+        id="workstation"
+        className="py-16 sm:py-24 px-5 sm:px-8 md:px-12 lg:px-16 bg-[#4162ff] text-white"
+      >
+        <div className="max-w-7xl mx-auto">
+          {/* ================= HEADER ================= */}
+          <div className="mb-10 sm:mb-14 reveal-elem">
+            <h2 className="font-['Bebas_Neue',sans-serif] text-4xl sm:text-6xl md:text-7xl uppercase tracking-tight text-white">
+              My Workstation
+            </h2>
+
+            <div className="h-1.5 w-16 sm:w-20 bg-[#ffe600] mt-2 rounded-full"></div>
+
+            <p className="text-white/80 max-w-md text-xs sm:text-sm mt-2">
+              The tools and development environment I use to design, build,
+              test, and deploy modern web applications.
+            </p>
+          </div>
+
+          {/* ================= WORKSTATION GRID ================= */}
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-start">
+            {/* ================= 01 — DEVELOPMENT ENVIRONMENT ================= */}
+            <div className="reveal-elem md:col-span-6 flex flex-col group">
+              <div className="aspect-[16/10] rounded-2xl overflow-hidden bg-slate-900/40 border border-white/20 mb-3 shadow-xl">
+                <img
+                  src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1000&q=80"
+                  alt="Development environment with code editor"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+
+              <h3 className="font-['Oswald',sans-serif] text-lg font-bold uppercase tracking-wider text-white">
+                Development Environment
+              </h3>
+
+              <p className="text-xs text-white/75 font-mono mt-0.5">
+                React • Vite • JavaScript • VS Code
+              </p>
+            </div>
+
+            {/* ================= 02 — BACKEND & APIS ================= */}
+            <div
+              className="reveal-elem md:col-span-6 flex flex-col group"
+              style={{ transitionDelay: "100ms" }}
+            >
+              <div className="aspect-[16/10] rounded-2xl overflow-hidden bg-slate-900/40 border border-white/20 mb-3 shadow-xl">
+                <img
+                  src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1000&q=80"
+                  alt="Backend server and API infrastructure"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+
+              <h3 className="font-['Oswald',sans-serif] text-lg font-bold uppercase tracking-wider text-white">
+                Backend &amp; APIs
+              </h3>
+
+              <p className="text-xs text-white/75 font-mono mt-0.5">
+                Node.js • Express • REST APIs • Database
+              </p>
+            </div>
+
+            {/* ================= 03 — DEVELOPMENT WORKFLOW ================= */}
+            <div className="reveal-elem md:col-span-8 flex flex-col group">
+              <div className="aspect-[16/9] rounded-2xl overflow-hidden bg-slate-900/40 border border-white/20 mb-3 shadow-xl">
+                <img
+                  src="https://images.unsplash.com/photo-1556075798-4825dfaaf498?auto=format&fit=crop&w=1200&q=80"
+                  alt="Git version control and software development workflow"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+
+              <h3 className="font-['Oswald',sans-serif] text-lg font-bold uppercase tracking-wider text-white">
+                Development Workflow
+              </h3>
+
+              <p className="text-xs text-white/75 font-mono mt-0.5">
+                Git • GitHub • Version Control • Project Development
+              </p>
+            </div>
+
+            {/* ================= 04 — TESTING & RESPONSIVE DEVELOPMENT ================= */}
+            <div
+              className="reveal-elem md:col-span-4 flex flex-col group"
+              style={{ transitionDelay: "100ms" }}
+            >
+              <div className="aspect-[4/3] md:aspect-[16/17] rounded-2xl overflow-hidden bg-slate-900/40 border border-white/20 mb-3 shadow-xl">
+                <img
+                  src="https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&w=900&q=80"
+                  alt="Responsive web development and testing"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+
+              <h3 className="font-['Oswald',sans-serif] text-lg font-bold uppercase tracking-wider text-white">
+                Testing &amp; Responsive Development
+              </h3>
+
+              <p className="text-xs text-white/75 font-mono mt-0.5">
+                Responsive UI • Testing • Debugging • Cross-Device Development
+              </p>
+            </div>
+          </div>
+        </div>
       </section>
 
       {}
@@ -1646,18 +2177,20 @@ lg:[-webkit-mask-image:none]
               key={copyIdx}
               className="flex items-center gap-8 sm:gap-12 font-['Bebas_Neue',sans-serif] text-3xl sm:text-5xl md:text-6xl tracking-wider pr-8"
             >
-              <span className="text-white">FULL STACK MASTERY</span>{" "}
+              <span className="text-white">THOUGHTFUL BY DESIGN</span>{" "}
               <span className="text-[#ffe600]">✦</span>
-              <span className="text-stroke-white">CLOUD ARCHITECTURE</span>{" "}
+              <span className="text-stroke-white">BUILT TO SCALE</span>{" "}
               <span className="text-[#ffe600]">✦</span>
-              <span className="text-white">LOW LATENCY SYSTEMS</span>{" "}
-              <span className="text-[#ffe600]">✦</span>
-              <span className="text-stroke-white">PIXEL PERFECT UI</span>{" "}
-              <span className="text-[#ffe600]">✦</span>
-              <span className="text-white">ACCESSIBLE CODEBASES</span>{" "}
+              <span className="text-white">LOGIC MEETS CRAFT</span>{" "}
               <span className="text-[#ffe600]">✦</span>
               <span className="text-stroke-white">
-                ZERO DOWNTIME DEPLOYS
+                FROM IDEA TO INTERFACE
+              </span>{" "}
+              <span className="text-[#ffe600]">✦</span>
+              <span className="text-white">ENGINEERED WITH INTENT</span>{" "}
+              <span className="text-[#ffe600]">✦</span>
+              <span className="text-stroke-white">
+                MAKE IT WORK. MAKE IT MATTER.
               </span>{" "}
               <span className="text-[#ffe600]">✦</span>
             </div>
@@ -1713,9 +2246,9 @@ lg:[-webkit-mask-image:none]
               </div>
               <button
                 onClick={copyEmailToClipboard}
-                className="font-['Bebas_Neue',sans-serif] text-3xl sm:text-5xl md:text-6xl tracking-wider text-white hover:text-[#ffe600] transition-colors text-left break-all"
+                className="font-['Bebas_Neue',sans-serif] text-xl sm:text-3xl md:text-4xl tracking-wider text-white hover:text-[#ffe600] transition-colors text-left break-all"
               >
-                INFO@ALEX.COM
+                vulavaptimanikanta@gmail.com
               </button>
             </div>
             <button
@@ -1730,7 +2263,7 @@ lg:[-webkit-mask-image:none]
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 text-xs sm:text-sm">
             <div className="space-y-2 col-span-2 sm:col-span-1">
               <div className="font-['Bebas_Neue',sans-serif] text-2xl tracking-wider text-white">
-                ALEX<span className="text-[#ffe600]">.DEV</span>
+                V<span className="text-[#ffe600]">.DEV</span>
               </div>
               <p className="text-white/70 text-xs leading-relaxed max-w-xs">
                 Engineering with empathy, architecting for high durability and
@@ -1820,10 +2353,8 @@ lg:[-webkit-mask-image:none]
               <div className="font-['Oswald',sans-serif] uppercase font-bold text-[#ffe600] tracking-widest text-xs mb-2">
                 Location
               </div>
-              <p className="text-white/80">San Francisco, CA</p>
-              <p className="text-white/70 text-xs">
-                Worldwide Remote Available
-              </p>
+              <p className="text-white/80">Andhra Pradesh, India</p>
+              <p className="text-white/70 text-xs">Remote Available</p>
               <div className="pt-1 text-emerald-300 flex items-center gap-1.5 text-xs font-mono">
                 <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
                 <span>Available for Hire</span>
@@ -1832,7 +2363,7 @@ lg:[-webkit-mask-image:none]
           </div>
 
           <div className="pt-6 border-t border-white/15 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-white/60">
-            <div>© 2026 ALEX RIVERA. ALL RIGHTS RESERVED.</div>
+            <div>© 2026 V MANIKANTA. ALL RIGHTS RESERVED.</div>
             <a
               href="#hero"
               onClick={(e) => handleSmoothScroll(e, "hero")}
