@@ -241,12 +241,12 @@ const SHOWCASE_PROJECTS = [
 
     tabletPreview: {
       type: "video",
-      src: "../public/previews/yoga-stories.mp4",
+      src: "../public/Previews/yoga-stories.mp4",
     },
 
     mobilePreview: {
       type: "image",
-      src: "../public/previews/yoga-stories-mobile.png",
+      src: "../public/Previews/yoga-stories-mobile.png",
     },
 
     badgeColor: "bg-[#fef08a]",
@@ -283,12 +283,12 @@ const SHOWCASE_PROJECTS = [
 
     tabletPreview: {
       type: "image",
-      src: "../public/previews/oxduel.png",
+      src: "../public/Previews/oxduel.png",
     },
 
     mobilePreview: {
       type: "image",
-      src: "../public/previews/oxduel-mobile.png",
+      src: "../public/Previews/oxduel-mobile.png",
     },
 
     badgeColor: "bg-[#a7f3d0]",
@@ -325,12 +325,12 @@ const SHOWCASE_PROJECTS = [
 
     tabletPreview: {
       type: "image",
-      src: "../public/previews/evalon.png",
+      src: "../public/Previews/evalon.png",
     },
 
     mobilePreview: {
       type: "image",
-      src: "../public/previews/evalon-mobile.png",
+      src: "../public/Previews/evalon-mobile.png",
     },
 
     badgeColor: "bg-[#c7d2fe]",
@@ -367,12 +367,12 @@ const SHOWCASE_PROJECTS = [
 
     tabletPreview: {
       type: "image",
-      src: " /previews/infinity-ai-pro.png",
+      src: " /Previews/infinity-ai-pro.png",
     },
 
     mobilePreview: {
       type: "image",
-      src: "/previews/infinity-ai-pro.png",
+      src: "/Previews/infinity-ai-pro.png",
     },
 
     badgeColor: "bg-[#93cbfb]",
