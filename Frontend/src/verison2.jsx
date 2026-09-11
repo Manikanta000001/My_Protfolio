@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import img from "../public/image1.png";
+import img from "/image1.png";
 
 const Icon = ({ name, className = "w-4 h-4", ...props }) => {
   switch (name) {
@@ -241,12 +241,12 @@ const SHOWCASE_PROJECTS = [
 
     tabletPreview: {
       type: "video",
-      src: "../public/previews/yoga-stories.mp4",
+      src: "/previews/yoga-stories.mp4",
     },
 
     mobilePreview: {
       type: "image",
-      src: "../public/previews/yoga-stories-mobile.png",
+      src: "/previews/yoga-stories-mobile.png",
     },
 
     badgeColor: "bg-[#fef08a]",
@@ -283,12 +283,12 @@ const SHOWCASE_PROJECTS = [
 
     tabletPreview: {
       type: "image",
-      src: "../public/previews/oxduel.png",
+      src: "/previews/oxduel.png",
     },
 
     mobilePreview: {
       type: "image",
-      src: "../public/previews/oxduel-mobile.png",
+      src: "/previews/oxduel-mobile.png",
     },
 
     badgeColor: "bg-[#a7f3d0]",
@@ -325,12 +325,12 @@ const SHOWCASE_PROJECTS = [
 
     tabletPreview: {
       type: "image",
-      src: "../public/previews/evalon.png",
+      src: "/previews/evalon.png",
     },
 
     mobilePreview: {
       type: "image",
-      src: "../public/previews/evalon-mobile.png",
+      src: "/previews/evalon-mobile.png",
     },
 
     badgeColor: "bg-[#c7d2fe]",
@@ -367,12 +367,12 @@ const SHOWCASE_PROJECTS = [
 
     tabletPreview: {
       type: "image",
-      src: "../public/previews/infinity-ai-pro.png",
+      src: " /previews/infinity-ai-pro.png",
     },
 
     mobilePreview: {
       type: "image",
-      src: "../public/previews/infinity-ai-pro.png",
+      src: "/previews/infinity-ai-pro.png",
     },
 
     badgeColor: "bg-[#93cbfb]",
