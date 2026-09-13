@@ -1,5 +1,12 @@
 import React, { useState, useEffect, useRef } from "react";
 import img from "/image1.png";
+import MS01 from "/Previews/MS-01.png";
+import MS02 from "/Previews/MS-02.png";
+import MS03 from "/Previews/MS-03.png";
+import workstation01 from "/Previews/workstation-01.png";
+import workstation02 from "/Previews/workstation-02.png";
+import workstation03 from "/Previews/workstation-03.png";
+import workstation04 from "/Previews/workstation-04.png";
 
 const Icon = ({ name, className = "w-4 h-4", ...props }) => {
   switch (name) {
@@ -232,12 +239,21 @@ const SHOWCASE_PROJECTS = [
     title: "Yoga Stories",
     type: "live",
     url: "https://yogastories.vercel.app/",
+    github: "https://github.com/Manikanta000001/YogaStories.git",
     category: "BOOKING PLATFORM",
 
     tagline: "A personal organization and class booking platform.",
 
     description:
       "A full-stack platform designed for managing yoga classes and bookings, with a focus on a simple user experience and practical organization.",
+
+    architecturePoints: [
+      "Designed to manage yoga classes, schedules, and user bookings through a unified web platform.",
+      "Provides a user-facing experience for discovering classes and making bookings.",
+      "Includes backend APIs to handle application data and booking-related operations.",
+      "Uses a database-backed architecture to persist classes, users, and booking information.",
+      "Built with a responsive interface so the platform can be used across different screen sizes.",
+    ],
 
     tabletPreview: {
       type: "video",
@@ -274,12 +290,21 @@ const SHOWCASE_PROJECTS = [
     title: "OxDuel",
     type: "live",
     url: "https://oxduel.site/",
+    github: "https://github.com/Manikanta000001/OX.git",
     category: "MULTIPLAYER WEB APPLICATION",
 
     tagline: "An interactive multiplayer web application.",
 
     description:
       "A live multiplayer web application built around an interactive gaming experience.",
+
+    architecturePoints: [
+      "Built around a real-time multiplayer gaming experience where players can join and compete in shared rooms.",
+      "Provides a simple room-based flow for players to enter a game and participate with other users.",
+      "Focuses on interactive game-state handling between connected players.",
+      "Uses a lightweight web interface designed to keep the gameplay experience clear and responsive.",
+      "Deployed as a live web application that can be accessed directly through the project website.",
+    ],
 
     tabletPreview: {
       type: "video",
@@ -316,12 +341,21 @@ const SHOWCASE_PROJECTS = [
     title: "Evalon",
     type: "live",
     url: "https://evalonsystems.vercel.app/",
+    github: "https://github.com/Manikanta000001/Project_Evalon.git",
     category: "SOFTWARE PROJECT",
 
     tagline: "A complete software project built around a practical solution.",
 
     description:
       "A software project developed with a focus on creating a practical, usable, and complete digital solution.",
+
+    architecturePoints: [
+      "Developed as a complete software application focused on solving a practical problem through a web-based interface.",
+      "Structured with separate frontend and backend responsibilities for a maintainable application architecture.",
+      "Uses API-driven communication between the user interface and application logic.",
+      "Includes persistent data handling to support the application's core functionality.",
+      "Designed with a responsive interface to provide a consistent experience across devices.",
+    ],
 
     tabletPreview: {
       type: "video",
@@ -358,6 +392,7 @@ const SHOWCASE_PROJECTS = [
     title: "Infinity AI Pro",
     type: "image",
     url: null,
+    github: "https://github.com/Manikanta000001/Infinity_Pro_AI.git",
     category: "AI PROJECT",
 
     tagline: "An AI-focused project built around practical functionality.",
@@ -365,9 +400,17 @@ const SHOWCASE_PROJECTS = [
     description:
       "A project focused on exploring and building practical software experiences around AI.",
 
+    architecturePoints: [
+      "Explores the development of practical software functionality around artificial intelligence.",
+      "Provides a user-facing interface for interacting with AI-focused features.",
+      "Organizes the application around clear user interactions and software functionality.",
+      "Focuses on combining AI capabilities with a usable web application experience.",
+      "Built as an experimental project for exploring practical applications of AI in software development.",
+    ],
+
     tabletPreview: {
       type: "video",
-      src: " /Previews/infinity.mp4",
+      src: "/Previews/infinity.mp4",
     },
 
     mobilePreview: {
@@ -390,7 +433,6 @@ const SHOWCASE_PROJECTS = [
     buildTool: "Vite",
   },
 ];
-
 const PROCESS_STEPS = [
   {
     step: "01",
@@ -398,8 +440,7 @@ const PROCESS_STEPS = [
     title: "Understand the Problem",
     description:
       "Understanding the requirements, identifying the problem to solve, and defining what the application needs to achieve before development begins.",
-    image:
-      "https://es-blog.files.wordpress.com/2025/11/disenar-con-ia-iterar.png",
+    image: "/Previews/WP-01.png",
     tags: ["Requirements", "Problem Analysis", "User Needs"],
   },
 
@@ -409,8 +450,7 @@ const PROCESS_STEPS = [
     title: "Plan & Design",
     description:
       "Planning the application structure, user flow, database, and interface to create a clear direction before writing the main code.",
-    image:
-      "https://aostasoftware.com/wp-content/uploads/2025/01/Illustration.png",
+    image: "/Previews/WP-02.png",
     tags: ["UI Planning", "User Flow", "Database Design"],
   },
 
@@ -420,8 +460,7 @@ const PROCESS_STEPS = [
     title: "Develop the Solution",
     description:
       "Building the frontend, backend, APIs, and database while focusing on responsive interfaces, practical functionality, and maintainable code.",
-    image:
-      "https://unsplash.com/illustrations/team-working-on-seo-strategy-and-development-63fOcZH7-rk.png",
+    image: "/Previews/WP-03.png",
     tags: ["Frontend", "Backend", "APIs"],
   },
 
@@ -431,53 +470,61 @@ const PROCESS_STEPS = [
     title: "Test & Improve",
     description:
       "Testing the application, identifying issues, improving the user experience, and making sure the final product works reliably across different devices.",
-    image: "https://sdettech.com/services/service1.png",
+    image: "/Previews/WP-04.png",
     tags: ["Testing", "Bug Fixing", "Deployment"],
   },
 ];
 
 const PROJECTS = [
   {
+    id: "yoga-stories",
     number: "01",
-    title: "MEDIA",
-    category: "WEB APPLICATION",
-    description:
-      "A modern web application built to provide a practical and engaging digital experience.",
-    image:
-      "https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=1200&q=80",
-    tags: ["Frontend", "Backend", "Database"],
-  },
-  {
-    number: "02",
-    title: "OXQL",
-    category: "SOFTWARE PROJECT",
-    description:
-      "A software project focused on solving a practical problem through a structured and user-friendly application.",
-    image:
-      "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1200&q=80",
-    tags: ["React", "APIs", "Database"],
-  },
-  {
-    number: "03",
-    title: "AVALON",
-    category: "FINAL YEAR PROJECT",
-    description:
-      "A final year project developed as a complete software solution with a focus on functionality, usability, and implementation.",
-    image:
-      "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80",
-    tags: ["Full Stack", "Web App", "Development"],
-  },
-  {
-    number: "04",
-    title: "YOGA STORIES",
+    title: "YOGASTORIES",
     category: "BOOKING PLATFORM",
     description:
-      "A platform designed to organize yoga classes and provide users with a simple way to explore and book sessions.",
-    image:
-      "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=1200&q=80",
+      "A full-stack platform designed for managing yoga classes and bookings, with a focus on a simple user experience and practical organization.",
+    image: "/Previews/yoga-stories-card.png",
     tags: ["React", "Node.js", "Booking"],
+    url: "https://yogastories.vercel.app/",
+  },
+
+  {
+    id: "oxduel",
+    number: "02",
+    title: "OXDUEL",
+    category: "MULTIPLAYER WEB APPLICATION",
+    description:
+      "A live multiplayer web application built around an interactive gaming experience.",
+    image: "/Previews/oxduel-card.png",
+    tags: ["Multiplayer", "Web App", "Interactive"],
+    url: "https://oxduel.site/",
+  },
+
+  {
+    id: "infinity-ai-pro",
+    number: "03",
+    title: "INFINITY AI PRO",
+    category: "AI PROJECT",
+    description:
+      "A project focused on exploring and building practical software experiences around AI.",
+    image: "/Previews/Infinity-card.png",
+    tags: ["AI", "Software", "Application"],
+    url: null,
+  },
+
+  {
+    id: "evalon",
+    number: "04",
+    title: "EVALON",
+    category: "SOFTWARE PROJECT",
+    description:
+      "A software project developed with a focus on creating a practical, usable, and complete digital solution.",
+    image: "/Previews/evalon-card.png",
+    tags: ["Full Stack", "Web App", "Development"],
+    url: "https://evalonsystems.vercel.app/",
   },
 ];
+
 function AnimatedCounter({ target, prefix = "", decimals = 0 }) {
   const [val, setVal] = useState(0);
   const elemRef = useRef(null);
@@ -546,7 +593,6 @@ function ProjectPreview({ preview, title }) {
         muted
         loop
         playsInline
-        
         preload="metadata"
         aria-label={`${title} preview`}
         className="w-full h-full object-cover"
@@ -651,6 +697,18 @@ export default function App() {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
+  const projectsSliderRef = useRef(null);
+
+  const projectsDragRef = useRef({
+    isDragging: false,
+    startX: 0,
+    startScrollLeft: 0,
+    moved: false,
+  });
+
+  const projectsResumeTimerRef = useRef(null);
+  const projectsPausedRef = useRef(false);
+
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.scrollY || document.documentElement.scrollTop;
@@ -674,7 +732,7 @@ export default function App() {
           }
         });
       },
-      { threshold: 0.08, rootMargin: "0px 0px -30px 0px" },
+      { threshold: 0.8, rootMargin: "0px 0px -30px 0px" },
     );
 
     const elements = document.querySelectorAll(".reveal-elem");
@@ -712,6 +770,150 @@ export default function App() {
     return () => observer.disconnect();
   }, []);
 
+  // useEffect(() => {
+  //   const slider = projectsSliderRef.current;
+
+  //   if (!slider) return;
+
+  //   let animationFrame;
+  //   let lastTime = performance.now();
+
+  //   const autoScroll = (currentTime) => {
+  //     const delta = currentTime - lastTime;
+  //     lastTime = currentTime;
+
+  //     if (!projectsPausedRef.current && !projectsDragRef.current.isDragging) {
+  //       slider.scrollLeft += delta * 0.10;
+
+  //       const firstSet = slider.querySelector(".projects-set");
+
+  //       if (firstSet) {
+  //         const loopWidth = firstSet.offsetWidth;
+
+  //         if (loopWidth > 0 && slider.scrollLeft >= loopWidth) {
+  //           slider.scrollLeft -= loopWidth;
+  //         }
+  //       }
+  //     }
+
+  //     animationFrame = requestAnimationFrame(autoScroll);
+  //   };
+
+  //   animationFrame = requestAnimationFrame(autoScroll);
+
+  //   return () => {
+  //     cancelAnimationFrame(animationFrame);
+  //   };
+  // }, []);
+
+  useEffect(() => {
+    const slider = projectsSliderRef.current;
+
+    if (!slider) return;
+
+    let animationFrame;
+    let lastTime = performance.now();
+
+    const autoScroll = (currentTime) => {
+      const delta = currentTime - lastTime;
+      lastTime = currentTime;
+
+      if (!projectsPausedRef.current && !projectsDragRef.current.isDragging) {
+        const speed = 0.08;
+
+        slider.scrollLeft += delta * speed;
+
+        // Two identical project sets = one complete loop
+        const loopWidth = slider.scrollWidth / 2;
+
+        if (loopWidth > 0 && slider.scrollLeft >= loopWidth) {
+          slider.scrollLeft -= loopWidth;
+        }
+      }
+
+      animationFrame = requestAnimationFrame(autoScroll);
+    };
+
+    animationFrame = requestAnimationFrame(autoScroll);
+
+    return () => {
+      cancelAnimationFrame(animationFrame);
+    };
+  }, []);
+
+  const handleProjectsPointerDown = (e) => {
+    const slider = projectsSliderRef.current;
+
+    if (!slider) return;
+
+    projectsDragRef.current = {
+      isDragging: true,
+      startX: e.clientX,
+      startScrollLeft: slider.scrollLeft,
+      moved: false,
+    };
+
+    projectsPausedRef.current = true;
+
+    slider.setPointerCapture?.(e.pointerId);
+  };
+
+  const handleProjectsPointerMove = (e) => {
+    const slider = projectsSliderRef.current;
+    const drag = projectsDragRef.current;
+
+    if (!slider || !drag.isDragging) return;
+
+    const distance = e.clientX - drag.startX;
+
+    if (Math.abs(distance) > 5) {
+      drag.moved = true;
+    }
+
+    slider.scrollLeft = drag.startScrollLeft - distance;
+
+    const firstSet = slider.querySelector(".projects-set");
+
+    if (!firstSet) return;
+
+    const loopWidth = firstSet.offsetWidth;
+
+    if (loopWidth <= 0) return;
+
+    if (slider.scrollLeft >= loopWidth) {
+      slider.scrollLeft -= loopWidth;
+      drag.startScrollLeft -= loopWidth;
+    }
+
+    if (slider.scrollLeft <= 0) {
+      slider.scrollLeft += loopWidth;
+      drag.startScrollLeft += loopWidth;
+    }
+  };
+
+  const handleProjectsPointerUp = (e) => {
+    const slider = projectsSliderRef.current;
+    const drag = projectsDragRef.current;
+
+    if (!slider || !drag.isDragging) return;
+
+    drag.isDragging = false;
+
+    slider.releasePointerCapture?.(e.pointerId);
+
+    clearTimeout(projectsResumeTimerRef.current);
+
+    projectsResumeTimerRef.current = setTimeout(() => {
+      projectsPausedRef.current = false;
+    }, 4500);
+  };
+
+  useEffect(() => {
+    return () => {
+      clearTimeout(projectsResumeTimerRef.current);
+    };
+  }, []);
+
   const triggerToast = (msg) => {
     setToastMessage(msg);
     setTimeout(() => {
@@ -740,27 +942,63 @@ export default function App() {
     }
   };
 
-  const handleContactSubmit = (e) => {
+  const handleContactSubmit = async (e) => {
     e.preventDefault();
+
     setIsSubmitting(true);
-    setTimeout(() => {
-      setIsSubmitting(false);
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: contactForm.name,
+          email: contactForm.email,
+          message: contactForm.message,
+        }),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.message || "Unable to send your message.");
+      }
+
       setIsContactModalOpen(false);
-      triggerToast("Transmission sent! Alex will get back to you within 24h.");
+
+      triggerToast("Message sent! Mani will get back to you within 24h.");
+
       setContactForm({
         name: "",
         email: "",
-        scope: "Full-Stack Web App Development",
         message: "",
       });
-    }, 800);
+    } catch (error) {
+      console.error("Contact form submission failed:", error);
+
+      triggerToast(
+        error.message || "Unable to send your message. Please try again.",
+      );
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  const openProjectSpec = (projectId) => {
+    const project = SHOWCASE_PROJECTS.find((item) => item.id === projectId);
+
+    if (project) {
+      setSelectedCaseModal(project);
+    }
   };
 
   const currentProject = SHOWCASE_PROJECTS[activeProjectIdx];
 
-  const mobileScale = 0.90;
-const mobileRight = -20;
-const mobileBottom = 0;
+  const mobileScale = 0.9;
+  const mobileRight = -20;
+  const mobileBottom = 0;
 
   return (
     <div className="bg-slate-100 text-slate-900 font-sans antialiased min-h-screen selection:bg-[#ffe600] selection:text-black overflow-x-hidden">
@@ -1145,11 +1383,11 @@ lg:[-webkit-mask-image:none]
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <article className="reveal-elem p-3 rounded-2xl bg-white border border-slate-200/80 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col group">
-            <div className="aspect-[4/3] rounded-xl overflow-hidden bg-slate-100 mb-4">
+            <div className="aspect-[4/3] rounded-xl overflow-hidden  mb-4">
               <img
-                src="https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?auto=format&fit=crop&w=800&q=80"
+                src={MS01}
                 alt="UI UX Design Service"
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                className="w-full h-full object-contain p-2 sm:p-3 transition-transform duration-500 group-hover:scale-110"
               />
             </div>
             <span className="text-[11px] font-mono font-bold text-[#4162ff] uppercase tracking-widest mb-1">
@@ -1169,11 +1407,11 @@ lg:[-webkit-mask-image:none]
             className="reveal-elem p-3 rounded-2xl bg-white border border-slate-200/80 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col group"
             style={{ transitionDelay: "100ms" }}
           >
-            <div className="aspect-[4/3] rounded-xl overflow-hidden bg-slate-100 mb-4">
+            <div className="aspect-[4/3] rounded-xl overflow-hidden  mb-4">
               <img
-                src="https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&w=800&q=80"
+                src={MS02}
                 alt="App Design Service"
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                className="w-full h-full object-contain p-2 sm:p-3 transition-transform duration-500 group-hover:scale-110"
               />
             </div>
             <span className="text-[11px] font-mono font-bold text-[#4162ff] uppercase tracking-widest mb-1">
@@ -1193,11 +1431,11 @@ lg:[-webkit-mask-image:none]
             className="reveal-elem p-3 rounded-2xl bg-white border border-slate-200/80 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col group"
             style={{ transitionDelay: "200ms" }}
           >
-            <div className="aspect-[4/3] rounded-xl overflow-hidden bg-slate-100 mb-4">
+            <div className="aspect-[4/3] rounded-xl overflow-hidden ">
               <img
-                src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80"
+                src={MS03}
                 alt="Web Development Service"
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                className="w-full h-full object-contain p-2 sm:p-3 transition-transform duration-500 group-hover:scale-110"
               />
             </div>
             <span className="text-[11px] font-mono font-bold text-[#4162ff] uppercase tracking-widest mb-1">
@@ -1308,7 +1546,7 @@ lg:[-webkit-mask-image:none]
                   <Icon name="arrow-right" className="w-4 h-4" />
                 </button>
                 <button
-                  onClick={() => setSelectedCaseModal(currentProject)}
+                  onClick={() => openProjectSpec(currentProject.id)}
                   className="hidden sm:inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-white/10 hover:bg-white/20 text-xs font-['Oswald',sans-serif] uppercase tracking-wider text-white transition-colors ml-2"
                 >
                   <span>View Spec</span>
@@ -1341,41 +1579,7 @@ lg:[-webkit-mask-image:none]
             {/* Dual Device Emulator Stage */}
             <div className="relative py-6 sm:py-10 flex justify-center items-center">
               {/* Tablet Frame */}
-              {/* Tablet Frame */}
-              {/* <div className="w-full max-w-4xl bg-slate-900 border-[6px] sm:border-[10px] border-slate-800 rounded-[24px] sm:rounded-[32px] shadow-2xl overflow-hidden relative">
-                <div className="h-[360px] sm:h-[440px] bg-white">
-                  {currentProject.type === "live" ? (
-                    <LiveProjectPreview
-                      url={currentProject.url}
-                      title={currentProject.title}
-                      mode="tablet"
-                    />
-                  ) : (
-                    <img
-                      src={currentProject.image}
-                      alt={currentProject.title}
-                      className="w-full h-full object-cover"
-                    />
-                  )}
-                </div>
-              </div> */}
-              {/* <div className="w-full max-w-6xl bg-slate-900 border-[6px] sm:border-[10px] border-slate-800 rounded-[24px] sm:rounded-[32px] shadow-2xl overflow-hidden relative">
-                <div className="h-[440px] sm:h-[560px] lg:h-[620px] bg-white">
-                  {currentProject.type === "live" ? (
-                    <LiveProjectPreview
-                      url={currentProject.url}
-                      title={currentProject.title}
-                      mode="tablet"
-                    />
-                  ) : (
-                    <img
-                      src={currentProject.image}
-                      alt={currentProject.title}
-                      className="w-full h-full object-cover"
-                    />
-                  )}
-                </div>
-              </div> */}
+
               <div className="w-full max-w-6xl bg-slate-900 border-[6px] sm:border-[10px] border-slate-800 rounded-[24px] sm:rounded-[32px] shadow-2xl overflow-hidden relative transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)]">
                 <div className="h-[440px] sm:h-[560px] lg:h-[620px] bg-white relative overflow-hidden">
                   <div
@@ -1402,18 +1606,17 @@ lg:[-webkit-mask-image:none]
               </div>
 
               {/* Overlapping Phone Mockup */}
-        {/* ================= MOBILE PHONE ================= */}
+              {/* ================= MOBILE PHONE ================= */}
 
-{/* EASY MOBILE PHONE CONTROLS
+              {/* EASY MOBILE PHONE CONTROLS
     Change these 3 values to adjust it:
     mobileScale  → overall size
     mobileRight  → move left/right
     mobileBottom → move up/down
 */}
 
-
-<div
-  className={`hidden sm:block absolute z-20
+              <div
+                className={`hidden sm:block absolute z-20
     w-[260px] md:w-[300px] lg:w-[320px]
     bg-slate-900
     border-[5px] sm:border-[7px] border-slate-800
@@ -1422,37 +1625,33 @@ lg:[-webkit-mask-image:none]
     overflow-hidden
     transition-all duration-700
     ease-[cubic-bezier(0.22,1,0.36,1)]
-    ${
-      previewOpen
-        ? "opacity-0 pointer-events-none"
-        : "opacity-100"
-    }
+    ${previewOpen ? "opacity-0 pointer-events-none" : "opacity-100"}
   `}
-  style={{
-    right: `${mobileRight}px`,
-    bottom: `${mobileBottom}px`,
-    transform: `scale(${mobileScale})`,
-    transformOrigin: "bottom right",
-  }}
-  onMouseEnter={(e) => {
-    e.currentTarget.style.transform = `scale(${mobileScale * 1.05})`;
-  }}
-  onMouseLeave={(e) => {
-    e.currentTarget.style.transform = `scale(${mobileScale})`;
-  }}
->
-  {/* Phone speaker / notch */}
-  <div className="w-14 h-2.5 bg-slate-800 rounded-full mx-auto my-1.5" />
+                style={{
+                  right: `${mobileRight}px`,
+                  bottom: `${mobileBottom}px`,
+                  transform: `scale(${mobileScale})`,
+                  transformOrigin: "bottom right",
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.transform = `scale(${mobileScale * 1.05})`;
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.transform = `scale(${mobileScale})`;
+                }}
+              >
+                {/* Phone speaker / notch */}
+                <div className="w-14 h-2.5 bg-slate-800 rounded-full mx-auto my-1.5" />
 
-  {/* Mobile screen */}
-  <div className="relative w-full h-[480px] md:h-[540px] overflow-hidden bg-white">
-    <ProjectPreview
-      key={`${currentProject.id}-mobile`}
-      preview={currentProject.mobilePreview}
-      title={currentProject.title}
-    />
-  </div>
-</div>
+                {/* Mobile screen */}
+                <div className="relative w-full h-[480px] md:h-[540px] overflow-hidden bg-white">
+                  <ProjectPreview
+                    key={`${currentProject.id}-mobile`}
+                    preview={currentProject.mobilePreview}
+                    title={currentProject.title}
+                  />
+                </div>
+              </div>
             </div>
 
             {/* Bottom Showcase Thumbnail Selector */}
@@ -1613,10 +1812,6 @@ lg:[-webkit-mask-image:none]
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     loading="lazy"
                   />
-                  <div className="absolute top-3 left-3 px-3 py-1 rounded-full bg-slate-950/85 backdrop-blur-md text-[#ffe600] font-['Bebas_Neue',sans-serif] text-xs tracking-wider shadow border border-white/10 flex items-center gap-1.5">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#ffe600] animate-ping"></span>
-                    <span>STEP {item.step}</span>
-                  </div>
                 </div>
 
                 {/* Clear Typographic Hierarchy */}
@@ -1689,266 +1884,580 @@ lg:[-webkit-mask-image:none]
           {/* ================= HORIZONTAL PROJECT RAIL ================= */}
           {/* ================= INFINITE PROJECT SLIDER ================= */}
           <div className="projects-slider-wrapper reveal-elem">
-            <div className="projects-slider">
+            <div
+              ref={projectsSliderRef}
+              className="projects-slider overflow-x-auto overflow-y-visible cursor-grab"
+              onPointerDown={handleProjectsPointerDown}
+              onPointerMove={handleProjectsPointerMove}
+              onPointerUp={handleProjectsPointerUp}
+              onPointerCancel={handleProjectsPointerUp}
+              style={{
+                scrollbarWidth: "none",
+                msOverflowStyle: "none",
+                touchAction: "pan-y",
+              }}
+            >
               <div className="projects-track">
-                {[...PROJECTS, ...PROJECTS].map((project, idx) => (
-                  <article
-                    key={`${project.number}-${idx}`}
-                    className="
-            project-card
-            group
-            relative
-            flex-none
-            w-[78vw]
-            sm:w-[48vw]
-            md:w-[36vw]
-            lg:w-[30vw]
-            xl:w-[28vw]
-            max-w-[420px]
-            overflow-hidden
-            rounded-2xl
-            bg-white
-            border
-            border-slate-200
-            shadow-sm
-            transition-all
-            duration-500
-            hover:-translate-y-2
-            hover:shadow-xl
-          "
-                  >
-                    {/* ================= IMAGE ================= */}
-                    <div className="relative aspect-[16/9] overflow-hidden bg-slate-100">
-                      <img
-                        src={project.image}
-                        alt={project.title}
-                        className="
-                w-full
-                h-full
-                object-cover
-                transition-transform
-                duration-700
-                ease-[cubic-bezier(0.22,1,0.36,1)]
-                group-hover:scale-105
-              "
-                      />
-
-                      {/* Overlay */}
-                      <div
-                        className="
-                absolute
-                inset-0
-                bg-gradient-to-t
-                from-slate-950/75
-                via-slate-950/10
-                to-transparent
-                opacity-80
-                transition-opacity
-                duration-500
-                group-hover:opacity-100
-              "
-                      />
-
-                      {/* Number */}
-                      <div className="absolute top-4 left-4">
-                        <span
+                {/* ================= FIRST SET ================= */}
+                <div className="projects-set">
+                  {PROJECTS.map((project, idx) => (
+                    <article
+                      key={`first-${project.number}-${idx}`}
+                      className="
+          project-card
+          group
+          relative
+          flex-none
+          w-[78vw]
+          sm:w-[48vw]
+          md:w-[36vw]
+          lg:w-[30vw]
+          xl:w-[28vw]
+          max-w-[420px]
+          overflow-hidden
+          rounded-2xl
+          bg-white
+          border
+          border-slate-200
+          shadow-sm
+          transition-all
+          duration-500
+          hover:-translate-y-2
+          hover:shadow-xl
+        "
+                    >
+                      {/* ================= IMAGE ================= */}
+                      <div className="relative aspect-[16/9] overflow-hidden bg-slate-100">
+                        <img
+                          src={project.image}
+                          alt={project.title}
+                          draggable="false"
                           className="
-                  inline-flex
-                  items-center
-                  justify-center
-                  min-w-10
-                  h-8
-                  px-3
-                  rounded-full
-                  bg-white/90
-                  backdrop-blur-md
-                  text-slate-900
-                  font-mono
-                  text-[10px]
-                  font-bold
-                  tracking-widest
-                "
-                        >
-                          {project.number}
-                        </span>
-                      </div>
+              w-full
+              h-full
+              object-cover
+              transition-transform
+              duration-700
+              ease-[cubic-bezier(0.22,1,0.36,1)]
+              group-hover:scale-105
+            "
+                        />
 
-                      {/* Hover Arrow */}
-                      <div
-                        className="
-                absolute
-                top-4
-                right-4
-                w-9
-                h-9
-                rounded-full
-                bg-[#4162ff]
-                text-white
-                flex
+                        {/* Overlay */}
+                        <div
+                          className="
+              absolute
+              inset-0
+              bg-gradient-to-t
+              from-slate-950/75
+              via-slate-950/10
+              to-transparent
+              opacity-80
+              transition-opacity
+              duration-500
+              group-hover:opacity-100
+            "
+                        />
+
+                        {/* Number */}
+                        <div className="absolute top-4 left-4">
+                          <span
+                            className="
+                inline-flex
                 items-center
                 justify-center
-                opacity-0
-                translate-y-2
-                group-hover:opacity-100
-                group-hover:translate-y-0
-                transition-all
-                duration-400
+                min-w-10
+                h-8
+                px-3
+                rounded-full
+                bg-white/90
+                backdrop-blur-md
+                text-slate-900
+                font-mono
+                text-[10px]
+                font-bold
+                tracking-widest
               "
-                      >
-                        <span className="transition-transform duration-300 group-hover:rotate-45">
-                          ↗
-                        </span>
-                      </div>
-
-                      {/* Category */}
-                      <div className="absolute bottom-4 left-5">
-                        <span
-                          className="
-                  font-mono
-                  text-[9px]
-                  sm:text-[10px]
-                  tracking-[0.2em]
-                  text-white
-                  uppercase
-                "
-                        >
-                          {project.category}
-                        </span>
-                      </div>
-                    </div>
-
-                    {/* ================= CONTENT ================= */}
-                    <div className="p-5 sm:p-6">
-                      <div className="flex items-start justify-between gap-4">
-                        <div>
-                          <h3
-                            className="
-                    font-['Bebas_Neue',sans-serif]
-                    text-3xl
-                    sm:text-4xl
-                    uppercase
-                    tracking-tight
-                    leading-none
-                    text-slate-900
-                    transition-colors
-                    duration-300
-                    group-hover:text-[#4162ff]
-                  "
                           >
-                            {project.title}
-                          </h3>
-
-                          <p
-                            className="
-                    mt-3
-                    text-xs
-                    sm:text-sm
-                    leading-relaxed
-                    text-slate-500
-                    line-clamp-3
-                  "
-                          >
-                            {project.description}
-                          </p>
+                            {project.number}
+                          </span>
                         </div>
 
-                        <span
+                        {/* Hover Arrow */}
+                        {/* Hover Arrow */}
+                        <a
+                          href={project.url || "#"}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          draggable="false"
+                          onPointerDown={(e) => {
+                            e.stopPropagation();
+                          }}
+                          onPointerMove={(e) => {
+                            e.stopPropagation();
+                          }}
+                          onPointerUp={(e) => {
+                            e.stopPropagation();
+                          }}
+                          onClick={(e) => {
+                            e.stopPropagation();
+
+                            if (!project.url) {
+                              e.preventDefault();
+                            }
+                          }}
                           className="
-                  hidden sm:block
-                  font-mono
-                  text-[10px]
-                  text-slate-300
-                  tracking-widest
-                "
+    absolute
+    top-4
+    right-4
+    w-9
+    h-9
+    rounded-full
+    bg-[#4162ff]
+    text-white
+    flex
+    items-center
+    justify-center
+    opacity-0
+    translate-y-2
+    group-hover:opacity-100
+    group-hover:translate-y-0
+    transition-all
+    duration-400
+    z-50
+  "
                         >
-                          /{project.number}
-                        </span>
-                      </div>
-
-                      {/* ================= TAGS ================= */}
-                      <div className="flex flex-wrap gap-1.5 mt-5">
-                        {project.tags.map((tag) => (
-                          <span
-                            key={tag}
-                            className="
-                    px-2.5
-                    py-1
-                    rounded-full
-                    border
-                    border-slate-200
-                    bg-slate-50
-                    text-[9px]
-                    sm:text-[10px]
-                    font-mono
-                    uppercase
-                    tracking-wide
-                    text-slate-500
-                    transition-all
-                    duration-300
-                    group-hover:border-[#4162ff]/30
-                    group-hover:bg-[#4162ff]/5
-                  "
-                          >
-                            {tag}
+                          <span className="transition-transform duration-300 group-hover:rotate-45">
+                            ↗
                           </span>
-                        ))}
+                        </a>
+
+                        {/* Category */}
+                        <div className="absolute bottom-4 left-5">
+                          <span
+                            className="
+                font-mono
+                text-[9px]
+                sm:text-[10px]
+                tracking-[0.2em]
+                text-white
+                uppercase
+              "
+                          >
+                            {project.category}
+                          </span>
+                        </div>
                       </div>
 
-                      {/* ================= FOOTER ================= */}
-                      <div
-                        className="
-                mt-5
-                pt-4
-                border-t
-                border-slate-100
+                      {/* ================= CONTENT ================= */}
+                      <div className="p-5 sm:p-6">
+                        <div className="flex items-start justify-between gap-4">
+                          <div>
+                            <button
+                              type="button"
+                              onClick={() => openProjectSpec(project.id)}
+                              onPointerDown={(e) => e.stopPropagation()}
+                              className="font-['Bebas_Neue',sans-serif] text-3xl sm:text-4xl uppercase tracking-tight leading-none text-slate-900 transition-colors duration-300 group-hover:text-[#4162ff] text-left cursor-pointer"
+                            >
+                              {project.title}
+                            </button>
+
+                            <p
+                              className="
+                  mt-3
+                  text-xs
+                  sm:text-sm
+                  leading-relaxed
+                  text-slate-500
+                  line-clamp-3
+                "
+                            >
+                              {project.description}
+                            </p>
+                          </div>
+
+                          <span
+                            className="
+                hidden
+                sm:block
+                font-mono
+                text-[10px]
+                text-slate-300
+                tracking-widest
+              "
+                          >
+                            /{project.number}
+                          </span>
+                        </div>
+
+                        {/* ================= TAGS ================= */}
+                        <div className="flex flex-wrap gap-1.5 mt-5">
+                          {project.tags.map((tag) => (
+                            <span
+                              key={tag}
+                              className="
+                  px-2.5
+                  py-1
+                  rounded-full
+                  border
+                  border-slate-200
+                  bg-slate-50
+                  text-[9px]
+                  sm:text-[10px]
+                  font-mono
+                  uppercase
+                  tracking-wide
+                  text-slate-500
+                  transition-all
+                  duration-300
+                  group-hover:border-[#4162ff]/30
+                  group-hover:bg-[#4162ff]/5
+                "
+                            >
+                              {tag}
+                            </span>
+                          ))}
+                        </div>
+
+                        {/* ================= FOOTER ================= */}
+                        <div
+                          className="
+              mt-5
+              pt-4
+              border-t
+              border-slate-100
+              flex
+              items-center
+              justify-between
+            "
+                        >
+                          <span
+                            className="
+                font-mono
+                text-[9px]
+                uppercase
+                tracking-[0.2em]
+                text-slate-400
+              "
+                          >
+                            Project {project.number}
+                          </span>
+
+                          <button
+                            type="button"
+                            onClick={() => openProjectSpec(project.id)}
+                            onPointerDown={(e) => e.stopPropagation()}
+                            className="
                 flex
                 items-center
-                justify-between
+                gap-2
+                text-[10px]
+                font-bold
+                uppercase
+                tracking-wider
+                text-slate-800
+                transition-colors
+                duration-300
+                hover:text-[#4162ff]
               "
-                      >
-                        <span
-                          className="
-                  font-mono
-                  text-[9px]
-                  uppercase
-                  tracking-[0.2em]
-                  text-slate-400
-                "
-                        >
-                          Project {project.number}
-                        </span>
-
-                        <button
-                          className="
-                  flex
-                  items-center
-                  gap-2
-                  text-[10px]
-                  font-bold
-                  uppercase
-                  tracking-wider
-                  text-slate-800
-                  transition-colors
+                          >
+                            View Project
+                            <span
+                              className="
+                  text-sm
+                  transition-transform
                   duration-300
-                  hover:text-[#4162ff]
+                  group-hover:translate-x-1
                 "
-                        >
-                          View Project
+                            >
+                              →
+                            </span>
+                          </button>
+                        </div>
+                      </div>
+                    </article>
+                  ))}
+                </div>
+
+                {/* ================= DUPLICATE SET ================= */}
+                <div className="projects-set" aria-hidden="true">
+                  {PROJECTS.map((project, idx) => (
+                    <article
+                      key={`second-${project.number}-${idx}`}
+                      className="
+          project-card
+          group
+          relative
+          flex-none
+          w-[78vw]
+          sm:w-[48vw]
+          md:w-[36vw]
+          lg:w-[30vw]
+          xl:w-[28vw]
+          max-w-[420px]
+          overflow-hidden
+          rounded-2xl
+          bg-white
+          border
+          border-slate-200
+          shadow-sm
+          transition-all
+          duration-500
+          hover:-translate-y-2
+          hover:shadow-xl
+        "
+                    >
+                      {/* IMAGE */}
+                      <div className="relative aspect-[16/9] overflow-hidden bg-slate-100">
+                        <img
+                          src={project.image}
+                          alt=""
+                          draggable="false"
+                          className="
+              w-full
+              h-full
+              object-cover
+              transition-transform
+              duration-700
+              ease-[cubic-bezier(0.22,1,0.36,1)]
+              group-hover:scale-105
+            "
+                        />
+
+                        <div
+                          className="
+              absolute
+              inset-0
+              bg-gradient-to-t
+              from-slate-950/75
+              via-slate-950/10
+              to-transparent
+              opacity-80
+              transition-opacity
+              duration-500
+              group-hover:opacity-100
+            "
+                        />
+
+                        {/* Number */}
+                        <div className="absolute top-4 left-4">
                           <span
                             className="
-                    text-sm
-                    transition-transform
-                    duration-300
-                    group-hover:translate-x-1
-                  "
+                inline-flex
+                items-center
+                justify-center
+                min-w-10
+                h-8
+                px-3
+                rounded-full
+                bg-white/90
+                backdrop-blur-md
+                text-slate-900
+                font-mono
+                text-[10px]
+                font-bold
+                tracking-widest
+              "
                           >
-                            →
+                            {project.number}
                           </span>
-                        </button>
+                        </div>
+
+                        {/* Hover Arrow */}
+                        {/* Hover Arrow */}
+                        <a
+                          href={project.url || "#"}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          draggable="false"
+                          onPointerDown={(e) => {
+                            e.stopPropagation();
+                          }}
+                          onPointerMove={(e) => {
+                            e.stopPropagation();
+                          }}
+                          onPointerUp={(e) => {
+                            e.stopPropagation();
+                          }}
+                          onClick={(e) => {
+                            e.stopPropagation();
+
+                            if (!project.url) {
+                              e.preventDefault();
+                            }
+                          }}
+                          className="
+    absolute
+    top-4
+    right-4
+    w-9
+    h-9
+    rounded-full
+    bg-[#4162ff]
+    text-white
+    flex
+    items-center
+    justify-center
+    opacity-0
+    translate-y-2
+    group-hover:opacity-100
+    group-hover:translate-y-0
+    transition-all
+    duration-400
+    z-50
+  "
+                        >
+                          <span className="transition-transform duration-300 group-hover:rotate-45">
+                            ↗
+                          </span>
+                        </a>
+
+                        {/* Category */}
+                        <div className="absolute bottom-4 left-5">
+                          <span
+                            className="
+                font-mono
+                text-[9px]
+                sm:text-[10px]
+                tracking-[0.2em]
+                text-white
+                uppercase
+              "
+                          >
+                            {project.category}
+                          </span>
+                        </div>
                       </div>
-                    </div>
-                  </article>
-                ))}
+
+                      {/* CONTENT */}
+                      <div className="p-5 sm:p-6">
+                        <div className="flex items-start justify-between gap-4">
+                          <div>
+                            <button
+                              type="button"
+                              onClick={() => openProjectSpec(project.id)}
+                              onPointerDown={(e) => e.stopPropagation()}
+                              className="font-['Bebas_Neue',sans-serif] text-3xl sm:text-4xl uppercase tracking-tight leading-none text-slate-900 transition-colors duration-300 group-hover:text-[#4162ff] text-left cursor-pointer"
+                            >
+                              {project.title}
+                            </button>
+
+                            <p
+                              className="
+                  mt-3
+                  text-xs
+                  sm:text-sm
+                  leading-relaxed
+                  text-slate-500
+                  line-clamp-3
+                "
+                            >
+                              {project.description}
+                            </p>
+                          </div>
+
+                          <span
+                            className="
+                hidden
+                sm:block
+                font-mono
+                text-[10px]
+                text-slate-300
+                tracking-widest
+              "
+                          >
+                            /{project.number}
+                          </span>
+                        </div>
+
+                        {/* TAGS */}
+                        <div className="flex flex-wrap gap-1.5 mt-5">
+                          {project.tags.map((tag) => (
+                            <span
+                              key={tag}
+                              className="
+                  px-2.5
+                  py-1
+                  rounded-full
+                  border
+                  border-slate-200
+                  bg-slate-50
+                  text-[9px]
+                  sm:text-[10px]
+                  font-mono
+                  uppercase
+                  tracking-wide
+                  text-slate-500
+                  transition-all
+                  duration-300
+                  group-hover:border-[#4162ff]/30
+                  group-hover:bg-[#4162ff]/5
+                "
+                            >
+                              {tag}
+                            </span>
+                          ))}
+                        </div>
+
+                        {/* FOOTER */}
+                        <div
+                          className="
+              mt-5
+              pt-4
+              border-t
+              border-slate-100
+              flex
+              items-center
+              justify-between
+            "
+                        >
+                          <span
+                            className="
+                font-mono
+                text-[9px]
+                uppercase
+                tracking-[0.2em]
+                text-slate-400
+              "
+                          >
+                            Project {project.number}
+                          </span>
+
+                          <button
+                            type="button"
+                            onClick={() => openProjectSpec(project.id)}
+                            onPointerDown={(e) => e.stopPropagation()}
+                            className="
+                flex
+                items-center
+                gap-2
+                text-[10px]
+                font-bold
+                uppercase
+                tracking-wider
+                text-slate-800
+                transition-colors
+                duration-300
+                hover:text-[#4162ff]
+              "
+                          >
+                            View Project
+                            <span
+                              className="
+                  text-sm
+                  transition-transform
+                  duration-300
+                  group-hover:translate-x-1
+                "
+                            >
+                              →
+                            </span>
+                          </button>
+                        </div>
+                      </div>
+                    </article>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
@@ -1971,97 +2480,7 @@ lg:[-webkit-mask-image:none]
       </section>
 
       {}
-      {/* <section
-        id="workstation"
-        className="py-16 sm:py-24 px-5 sm:px-8 md:px-12 lg:px-16 bg-[#4162ff] text-white"
-      >
-        <div className="max-w-7xl mx-auto">
-          <div className="mb-10 sm:mb-14 reveal-elem">
-            <h2 className="font-['Bebas_Neue',sans-serif] text-4xl sm:text-6xl md:text-7xl uppercase tracking-tight text-white">
-              My Workstation
-            </h2>
-            <div className="h-1.5 w-16 sm:w-20 bg-[#ffe600] mt-2 rounded-full"></div>
-            <p className="text-white/80 max-w-md text-xs sm:text-sm mt-2">
-              The tools &amp; development environment I use to design, build, test, and deploy modern web applications.
-            </p>
-          </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-start">
-            <div className="reveal-elem md:col-span-6 flex flex-col group">
-              <div className="aspect-[16/10] rounded-2xl overflow-hidden bg-slate-900/40 border border-white/20 mb-3 shadow-xl">
-                <img
-                  src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80"
-                  alt="Primary Development Rig"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-              </div>
-              <h3 className="font-['Oswald',sans-serif] text-lg font-bold uppercase tracking-wider text-white">
-                Primary Development Rig
-              </h3>
-              <p className="text-xs text-white/75 font-mono mt-0.5">
-                Dual 4K Studio Displays • Custom Ergonomic Split Mechanical
-                Keyboard
-              </p>
-            </div>
-
-            <div
-              className="reveal-elem md:col-span-6 flex flex-col group"
-              style={{ transitionDelay: "100ms" }}
-            >
-              <div className="aspect-[16/10] rounded-2xl overflow-hidden bg-slate-900/40 border border-white/20 mb-3 shadow-xl">
-                <img
-                  src="https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?auto=format&fit=crop&w=800&q=80"
-                  alt="iPad Pro Wireframing"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-              </div>
-              <h3 className="font-['Oswald',sans-serif] text-lg font-bold uppercase tracking-wider text-white">
-                iPad Pro Wireframing &amp; Touch QA
-              </h3>
-              <p className="text-xs text-white/75 font-mono mt-0.5">
-                Apple Pencil 2 • Native iOS Touch &amp; Gesture Debugging •
-                Figma Mirror
-              </p>
-            </div>
-
-            <div className="reveal-elem md:col-span-8 flex flex-col group">
-              <div className="aspect-[16/9] rounded-2xl overflow-hidden bg-slate-900/40 border border-white/20 mb-3 shadow-xl">
-                <img
-                  src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=1000&q=80"
-                  alt="MacBook Pro M-Series"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-              </div>
-              <h3 className="font-['Oswald',sans-serif] text-lg font-bold uppercase tracking-wider text-white">
-                MacBook Pro M-Series Max
-              </h3>
-              <p className="text-xs text-white/75 font-mono mt-0.5">
-                64GB Unified Memory • Docker Linux Virtualization • Microservice
-                Containers
-              </p>
-            </div>
-
-            <div
-              className="reveal-elem md:col-span-4 flex flex-col group"
-              style={{ transitionDelay: "100ms" }}
-            >
-              <div className="aspect-[4/3] md:aspect-[16/17] rounded-2xl overflow-hidden bg-slate-900/40 border border-white/20 mb-3 shadow-xl">
-                <img
-                  src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80"
-                  alt="Audio & Test Devices"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-              </div>
-              <h3 className="font-['Oswald',sans-serif] text-lg font-bold uppercase tracking-wider text-white">
-                Audio &amp; Test Devices
-              </h3>
-              <p className="text-xs text-white/75 font-mono mt-0.5">
-                Sony WH-1000XM5 ANC • Pixel &amp; iPhone Real Device Lab
-              </p>
-            </div>
-          </div>
-        </div>
-      </section> */}
       {/* ================= WORKSTATION ================= */}
       <section
         id="workstation"
@@ -2086,9 +2505,9 @@ lg:[-webkit-mask-image:none]
           <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-start">
             {/* ================= 01 — DEVELOPMENT ENVIRONMENT ================= */}
             <div className="reveal-elem md:col-span-6 flex flex-col group">
-              <div className="aspect-[16/10] rounded-2xl overflow-hidden bg-slate-900/40 border border-white/20 mb-3 shadow-xl">
+              <div className="aspect-[16/9] rounded-2xl overflow-hidden bg-slate-900/40 border border-white/20 mb-3 shadow-xl">
                 <img
-                  src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1000&q=80"
+                  src={workstation01}
                   alt="Development environment with code editor"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
@@ -2108,10 +2527,10 @@ lg:[-webkit-mask-image:none]
               className="reveal-elem md:col-span-6 flex flex-col group"
               style={{ transitionDelay: "100ms" }}
             >
-              <div className="aspect-[16/10] rounded-2xl overflow-hidden bg-slate-900/40 border border-white/20 mb-3 shadow-xl">
+              <div className="aspect-[21/10] rounded-2xl overflow-hidden bg-slate-900/40 border border-white/20 mb-3 shadow-xl">
                 <img
-                  src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1000&q=80"
-                  alt="Backend server and API infrastructure"
+                  src={workstation02}
+                  alt="Git version control and software development workflow"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
@@ -2127,13 +2546,13 @@ lg:[-webkit-mask-image:none]
 
             {/* ================= 03 — DEVELOPMENT WORKFLOW ================= */}
             <div className="reveal-elem md:col-span-8 flex flex-col group">
-              <div className="aspect-[16/9] rounded-2xl overflow-hidden bg-slate-900/40 border border-white/20 mb-3 shadow-xl">
-                <img
-                  src="https://images.unsplash.com/photo-1556075798-4825dfaaf498?auto=format&fit=crop&w=1200&q=80"
-                  alt="Git version control and software development workflow"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-              </div>
+             <div className="aspect-[21/10] rounded-2xl overflow-hidden bg-slate-900/40 border border-white/20 mb-3 shadow-xl">
+  <img
+    src={workstation03}
+    alt="Git version control and software development workflow"
+    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+  />
+</div>
 
               <h3 className="font-['Oswald',sans-serif] text-lg font-bold uppercase tracking-wider text-white">
                 Development Workflow
@@ -2149,14 +2568,13 @@ lg:[-webkit-mask-image:none]
               className="reveal-elem md:col-span-4 flex flex-col group"
               style={{ transitionDelay: "100ms" }}
             >
-              <div className="aspect-[4/3] md:aspect-[16/17] rounded-2xl overflow-hidden bg-slate-900/40 border border-white/20 mb-3 shadow-xl">
+              <div className="aspect-[16/9] rounded-2xl overflow-hidden bg-slate-900/40 border border-white/20 mb-3 shadow-xl">
                 <img
-                  src="https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&w=900&q=80"
+                  src={workstation04}
                   alt="Responsive web development and testing"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
-
               <h3 className="font-['Oswald',sans-serif] text-lg font-bold uppercase tracking-wider text-white">
                 Testing &amp; Responsive Development
               </h3>
@@ -2248,7 +2666,7 @@ lg:[-webkit-mask-image:none]
                 onClick={copyEmailToClipboard}
                 className="font-['Bebas_Neue',sans-serif] text-xl sm:text-3xl md:text-4xl tracking-wider text-white hover:text-[#ffe600] transition-colors text-left break-all"
               >
-                vulavaptimanikanta@gmail.com
+                vulavapatimanikanta@gmail.com
               </button>
             </div>
             <button
@@ -2378,71 +2796,359 @@ lg:[-webkit-mask-image:none]
       {}
       {selectedCaseModal && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/75 backdrop-blur-sm animate-fade-in">
-          <div className="w-full max-w-2xl rounded-3xl p-6 sm:p-8 bg-white text-slate-900 shadow-2xl max-h-[90vh] overflow-y-auto">
-            <div className="flex items-center justify-between pb-4 mb-6 border-b border-slate-200">
-              <span className="text-xs font-mono uppercase tracking-widest text-[#4162ff] font-bold">
-                {selectedCaseModal.category}
-              </span>
-              <button
-                onClick={() => setSelectedCaseModal(null)}
-                className="p-1.5 rounded-full hover:bg-slate-100 text-slate-500 hover:text-slate-900 transition-colors"
-                aria-label="Close modal"
-              >
-                <Icon name="x" className="w-5 h-5" />
-              </button>
-            </div>
+          <div
+            className="
+        w-full
+        max-w-4xl
+        max-h-[88vh]
+        rounded-3xl
+        bg-white
+        text-slate-900
+        shadow-2xl
+        overflow-hidden
+        flex
+        flex-col
+      "
+          >
+            {/* ================= MODAL HEADER ================= */}
+            <div className="shrink-0 px-6 sm:px-8 pt-6 sm:pt-7 pb-4 border-b border-slate-200">
+              <div className="flex items-center justify-between gap-4">
+                <div>
+                  <span className="text-xs font-mono uppercase tracking-widest text-[#4162ff] font-bold">
+                    {selectedCaseModal.category}
+                  </span>
 
-            <div className="space-y-5">
-              <h3 className="font-['Oswald',sans-serif] text-2xl sm:text-3xl font-bold uppercase text-slate-900">
-                {selectedCaseModal.title}
-              </h3>
-
-              <div>
-                <h4 className="text-xs font-mono uppercase text-[#4162ff] font-bold mb-1">
-                  Architecture Overview
-                </h4>
-                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                  {selectedCaseModal.description}
-                </p>
-              </div>
-
-              <div>
-                <h4 className="text-xs font-mono uppercase text-[#4162ff] font-bold mb-2">
-                  Verified Metrics
-                </h4>
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
-                  {selectedCaseModal.metrics.map((m, i) => (
-                    <div
-                      key={i}
-                      className="p-3 rounded-xl bg-slate-100 text-xs font-mono text-slate-800 flex items-center gap-1.5"
-                    >
-                      <span className="text-[#4162ff]">✦</span> {m}
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              <div>
-                <h4 className="text-xs font-mono uppercase text-[#4162ff] font-bold mb-2">
-                  Tech Footprint
-                </h4>
-                <div className="flex flex-wrap gap-2">
-                  {selectedCaseModal.tech.map((t, i) => (
-                    <span
-                      key={i}
-                      className="px-3 py-1 rounded-full text-xs font-mono bg-blue-50 text-[#4162ff] font-semibold border border-blue-100"
-                    >
-                      {t}
+                  <div className="flex items-center gap-3 mt-1">
+                    <span className="font-mono text-[10px] text-slate-400 tracking-widest">
+                      PROJECT
                     </span>
-                  ))}
+
+                    <span className="w-1 h-1 rounded-full bg-[#ffe600]" />
+
+                    <span className="font-mono text-[10px] text-slate-400 tracking-widest">
+                      {selectedCaseModal.id}
+                    </span>
+                  </div>
+                </div>
+
+                <button
+                  onClick={() => setSelectedCaseModal(null)}
+                  className="
+              shrink-0
+              w-9
+              h-9
+              rounded-full
+              bg-slate-100
+              hover:bg-slate-900
+              text-slate-500
+              hover:text-white
+              flex
+              items-center
+              justify-center
+              transition-all
+              duration-300
+            "
+                  aria-label="Close modal"
+                >
+                  <Icon name="x" className="w-4 h-4" />
+                </button>
+              </div>
+            </div>
+
+            {/* ================= SCROLLABLE CONTENT ================= */}
+            <div
+              className="
+          project-spec-scroll
+          flex-1
+          min-h-0
+          overflow-y-auto
+          px-6
+          sm:px-8
+          py-6
+          sm:py-8
+        "
+            >
+              <div className="space-y-7">
+                {/* PROJECT TITLE */}
+                <div>
+                  <h3
+                    className="
+                font-['Oswald',sans-serif]
+          text-2xl 
+sm:text-3xl 
+lg:text-4xl
+                font-bold
+                uppercase
+                tracking-tight
+                text-slate-900
+              "
+                  >
+                    {selectedCaseModal.title}
+                  </h3>
+
+                  <p className="mt-2 text-sm sm:text-base text-slate-500 leading-relaxed max-w-2xl">
+                    {selectedCaseModal.tagline}
+                  </p>
+                </div>
+
+                {/* ARCHITECTURE OVERVIEW */}
+                <div>
+                  <div className="flex items-center gap-3 mb-2">
+                    <h4 className="text-xs font-mono uppercase tracking-widest text-[#4162ff] font-bold">
+                      Architecture Overview
+                    </h4>
+
+                    <span className="h-px flex-1 bg-slate-200" />
+                  </div>
+
+                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed max-w-3xl">
+                    {selectedCaseModal.description}
+                  </p>
+
+                  {/* PROJECT POINTS */}
+                  {selectedCaseModal.architecturePoints?.length > 0 && (
+                    <div className="mt-4 space-y-2.5">
+                      {selectedCaseModal.architecturePoints.map(
+                        (point, index) => (
+                          <div
+                            key={index}
+                            className="
+                      flex
+                      items-start
+                      gap-3
+                      p-3
+                      sm:p-3.5
+                      rounded-xl
+                      bg-slate-50
+                      border
+                      border-slate-100
+                    "
+                          >
+                            <span
+                              className="
+                        shrink-0
+                        w-5
+                        h-5
+                        rounded-full
+                        bg-[#4162ff]
+                        text-white
+                        flex
+                        items-center
+                        justify-center
+                        text-[9px]
+                        font-mono
+                        font-bold
+                        mt-0.5
+                      "
+                            >
+                              {String(index + 1).padStart(2, "0")}
+                            </span>
+
+                            <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                              {point}
+                            </p>
+                          </div>
+                        ),
+                      )}
+                    </div>
+                  )}
+                </div>
+
+                {/* VERIFIED METRICS */}
+                <div>
+                  <div className="flex items-center gap-3 mb-3">
+                    <h4 className="text-xs font-mono uppercase tracking-widest text-[#4162ff] font-bold">
+                      Verified Metrics
+                    </h4>
+
+                    <span className="h-px flex-1 bg-slate-200" />
+                  </div>
+
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
+                    {selectedCaseModal.metrics.map((m, i) => (
+                      <div
+                        key={i}
+                        className="
+                    p-3.5
+                    rounded-xl
+                    bg-slate-100
+                    text-xs
+                    font-mono
+                    text-slate-800
+                    flex
+                    items-center
+                    gap-2
+                  "
+                      >
+                        <span className="text-[#4162ff]">✦</span>
+                        <span>{m}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* TECH FOOTPRINT */}
+                <div>
+                  <div className="flex items-center gap-3 mb-3">
+                    <h4 className="text-xs font-mono uppercase tracking-widest text-[#4162ff] font-bold">
+                      Tech Footprint
+                    </h4>
+
+                    <span className="h-px flex-1 bg-slate-200" />
+                  </div>
+
+                  {selectedCaseModal.tech?.length > 0 ? (
+                    <div className="flex flex-wrap gap-2">
+                      {selectedCaseModal.tech.map((t, i) => (
+                        <span
+                          key={i}
+                          className="
+                      px-3
+                      py-1.5
+                      rounded-full
+                      text-xs
+                      font-mono
+                      bg-blue-50
+                      text-[#4162ff]
+                      font-semibold
+                      border
+                      border-blue-100
+                    "
+                        >
+                          {t}
+                        </span>
+                      ))}
+                    </div>
+                  ) : (
+                    <span className="text-xs font-mono text-slate-400">
+                      Technology details coming soon
+                    </span>
+                  )}
+                </div>
+
+                {/* PROJECT LINKS — STRUCTURE ONLY FOR NOW */}
+                <div>
+                  <div className="flex items-center gap-3 mb-3">
+                    <h4 className="text-xs font-mono uppercase tracking-widest text-[#4162ff] font-bold">
+                      Project Links
+                    </h4>
+
+                    <span className="h-px flex-1 bg-slate-200" />
+                  </div>
+
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    {selectedCaseModal.url && (
+                      <a
+                        href={selectedCaseModal.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="
+                    group
+                    flex
+                    items-center
+                    justify-between
+                    gap-3
+                    px-4
+                    py-3.5
+                    rounded-xl
+                    bg-[#4162ff]
+                    text-white
+                    hover:bg-slate-900
+                    transition-all
+                    duration-300
+                  "
+                      >
+                        <span className="flex items-center gap-3">
+                          <Icon name="external-link" className="w-4 h-4" />
+
+                          <span>
+                            <span className="block text-[9px] font-mono uppercase tracking-widest text-white/60">
+                              Website
+                            </span>
+
+                            <span className="block text-xs font-['Oswald',sans-serif] uppercase tracking-wider font-bold">
+                              Live Site
+                            </span>
+                          </span>
+                        </span>
+
+                        <Icon
+                          name="arrow-up-right"
+                          className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
+                        />
+                      </a>
+                    )}
+
+                    {selectedCaseModal.github && (
+                      <a
+                        href={selectedCaseModal.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="
+                    group
+                    flex
+                    items-center
+                    justify-between
+                    gap-3
+                    px-4
+                    py-3.5
+                    rounded-xl
+                    bg-slate-950
+                    text-white
+                    hover:bg-[#4162ff]
+                    transition-all
+                    duration-300
+                  "
+                      >
+                        <span className="flex items-center gap-3">
+                          <Icon name="github" className="w-4 h-4" />
+
+                          <span>
+                            <span className="block text-[9px] font-mono uppercase tracking-widest text-white/50">
+                              Repository
+                            </span>
+
+                            <span className="block text-xs font-['Oswald',sans-serif] uppercase tracking-wider font-bold">
+                              Source Code
+                            </span>
+                          </span>
+                        </span>
+
+                        <Icon
+                          name="arrow-up-right"
+                          className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
+                        />
+                      </a>
+                    )}
+                  </div>
                 </div>
               </div>
             </div>
 
-            <div className="pt-6 mt-6 border-t border-slate-200 flex justify-end">
+            {/* ================= MODAL FOOTER ================= */}
+            <div className="shrink-0 px-6 sm:px-8 py-4 border-t border-slate-200 flex items-center justify-between gap-4 bg-white">
+              <span className="hidden sm:block text-[9px] font-mono uppercase tracking-[0.2em] text-slate-400">
+                Project Specification
+              </span>
+
               <button
                 onClick={() => setSelectedCaseModal(null)}
-                className="px-6 py-2.5 rounded-full text-xs font-['Oswald',sans-serif] uppercase tracking-wider bg-[#ffe600] text-slate-950 font-bold hover:bg-slate-900 hover:text-white transition-colors"
+                className="
+            ml-auto
+            px-6
+            py-2.5
+            rounded-full
+            text-xs
+            font-['Oswald',sans-serif]
+            uppercase
+            tracking-wider
+            bg-[#ffe600]
+            text-slate-950
+            font-bold
+            hover:bg-slate-900
+            hover:text-white
+            transition-colors
+          "
               >
                 Close Spec
               </button>
@@ -2461,7 +3167,7 @@ lg:[-webkit-mask-image:none]
                   Start A Project
                 </h3>
                 <span className="text-xs text-slate-500">
-                  Alex typically responds within 24 hours.
+                  Mani typically responds within 24 hours.
                 </span>
               </div>
               <button
@@ -2504,24 +3210,6 @@ lg:[-webkit-mask-image:none]
                   placeholder="sarah@example.com"
                   className="w-full px-4 py-2.5 rounded-xl bg-slate-50 border border-slate-200 text-xs sm:text-sm focus:outline-none focus:border-[#4162ff]"
                 />
-              </div>
-
-              <div>
-                <label className="block text-xs font-['Oswald',sans-serif] uppercase tracking-wider text-slate-600 mb-1">
-                  Project Scope
-                </label>
-                <select
-                  value={contactForm.scope}
-                  onChange={(e) =>
-                    setContactForm({ ...contactForm, scope: e.target.value })
-                  }
-                  className="w-full px-4 py-2.5 rounded-xl bg-slate-50 border border-slate-200 text-xs sm:text-sm focus:outline-none focus:border-[#4162ff]"
-                >
-                  <option>Full-Stack Web App Development</option>
-                  <option>UI/UX Design System &amp; Product Design</option>
-                  <option>Mobile App (iOS / Android)</option>
-                  <option>Technical Consultation / Advisory</option>
-                </select>
               </div>
 
               <div>

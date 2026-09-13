@@ -89,56 +89,56 @@
 
 /* ================= INFINITE PROJECT SLIDER ================= */
 
+.projects-slider {
+  overflow-x: auto !important;
+  overflow-y: visible;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  cursor: grab;
+  user-select: none;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-x: contain;
+}
+/* ================= PROJECT SLIDER CONTAINER ================= */
+
 .projects-slider-wrapper {
-  width: 100%;
+  position: relative;
+  width: calc(100% - 48px);
+  max-width: 1800px;
+  margin: 0 auto;
+  padding: 18px 24px;
   overflow: hidden;
+ 
+
+  box-shadow: 0 0px 12px -22px rgba(15, 23, 42, 0.35);
 }
 
-.projects-slider {
-  width: 100%;
-  overflow: hidden;
+.projects-slider::-webkit-scrollbar {
+  display: none;
+}
+
+.projects-slider.is-dragging {
+  cursor: grabbing;
 }
 
 .projects-track {
-  display: flex;
+  display: flex !important;
   width: max-content;
-  gap: 1.25rem;
-
-  animation: projectInfiniteScroll 55s linear infinite;
-
-  will-change: transform;
+  animation: none !important;
+  transform: none !important;
+  gap: 1rem;
 }
 
-
-/* Pause when cursor is over the project area */
-
-.projects-slider:hover .projects-track {
-  animation-play-state: paused;
+.projects-set {
+  display: flex;
+  flex: none;
+  gap: 1rem;
 }
 
-
-/* Infinite movement */
-
-@keyframes projectInfiniteScroll {
-  from {
-    transform: translateX(0);
-  }
-
-  to {
-    transform: translateX(-50%);
-  }
+.projects-track img {
+  -webkit-user-drag: none;
+  user-select: none;
 }
-
-
-/* Slightly slower on mobile */
-
-@media (max-width: 640px) {
-  .projects-track {
-    gap: 1rem;
-    animation-duration: 48s;
-  }
-}
-
 
 @keyframes previewFadeIn {
   from {
@@ -150,4 +150,82 @@
     opacity: 1;
     transform: scale(1);
   }
+}
+
+/* ================= MAIN PAGE SCROLLBAR ================= */
+
+@media (min-width: 1024px) {
+  html {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(65, 98, 255, 0.55) transparent;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(65, 98, 255, 0.55) transparent;
+  }
+
+  /* Chrome / Edge / Safari */
+  html::-webkit-scrollbar,
+  body::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  html::-webkit-scrollbar-track,
+  body::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  html::-webkit-scrollbar-thumb,
+  body::-webkit-scrollbar-thumb {
+    background: rgba(65, 98, 255, 0.4);
+    border-radius: 999px;
+    transition: background 0.3s ease;
+  }
+
+  html::-webkit-scrollbar-thumb:hover,
+  body::-webkit-scrollbar-thumb:hover {
+    background: rgba(65, 98, 255, 0.8);
+  }
+
+  html::-webkit-scrollbar-button,
+  body::-webkit-scrollbar-button {
+    display: none;
+  }
+}
+
+
+/* ================= PROJECT SPEC SCROLLBAR ================= */
+
+.project-spec-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(65, 98, 255, 0.55) transparent;
+  scroll-behavior: smooth;
+}
+
+/* Chrome / Edge / Safari */
+.project-spec-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+
+.project-spec-scroll::-webkit-scrollbar-track {
+  background: transparent;
+  margin: 10px 0;
+}
+
+.project-spec-scroll::-webkit-scrollbar-thumb {
+  background: rgba(65, 98, 255, 0.35);
+  border-radius: 999px;
+  border: 1px solid transparent;
+  background-clip: padding-box;
+  transition: background 0.3s ease;
+}
+
+.project-spec-scroll::-webkit-scrollbar-thumb:hover {
+  background: rgba(65, 98, 255, 0.75);
+}
+
+.project-spec-scroll::-webkit-scrollbar-button {
+  display: none;
 }
