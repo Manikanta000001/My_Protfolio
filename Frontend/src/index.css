@@ -229,3 +229,54 @@
 .project-spec-scroll::-webkit-scrollbar-button {
   display: none;
 }
+
+
+/* =========================================
+   MOBILE PROJECT SLIDER
+   Desktop/tablet remain unchanged
+========================================= */
+
+@media (max-width: 639px) {
+  .projects-slider-wrapper {
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 16px !important;
+    overflow: hidden !important;
+    box-sizing: border-box !important;
+  }
+
+  .projects-slider {
+    width: 100% !important;
+    max-width: none !important;
+    overflow-x: auto !important;
+    overflow-y: visible !important;
+    padding: 4px 0 12px 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  .projects-track {
+    display: flex !important;
+    width: max-content !important;
+    gap: 14px !important;
+  }
+
+  .projects-set {
+    display: flex !important;
+    flex: 0 0 auto !important;
+    width: max-content !important;
+    gap: 14px !important;
+  }
+
+  .project-card {
+    flex: 0 0 88vw !important;
+    width: 88vw !important;
+    max-width: none !important;
+    min-width: 88vw !important;
+    box-sizing: border-box !important;
+  }
+
+  .project-card .p-5 {
+    padding: 18px !important;
+  }
+}

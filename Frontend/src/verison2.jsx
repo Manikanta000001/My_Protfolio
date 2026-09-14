@@ -415,7 +415,7 @@ const SHOWCASE_PROJECTS = [
 
     mobilePreview: {
       type: "image",
-      src: "/Previews/infinity-ai-pro.png",
+      src: "/Previews/infinity-mobile.png",
     },
 
     badgeColor: "bg-[#93cbfb]",
@@ -709,6 +709,20 @@ export default function App() {
   const projectsResumeTimerRef = useRef(null);
   const projectsPausedRef = useRef(false);
 
+  const pauseMarquee = (e) => {
+  const track = e.currentTarget.querySelector(
+    ".marquee-track-left, .marquee-track-fast, .marquee-track-right"
+  );
+
+  if (!track) return;
+
+  track.classList.add("marquee-paused");
+
+  setTimeout(() => {
+    track.classList.remove("marquee-paused");
+  }, 2000);
+};
+
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.scrollY || document.documentElement.scrollTop;
@@ -770,41 +784,6 @@ export default function App() {
     return () => observer.disconnect();
   }, []);
 
-  // useEffect(() => {
-  //   const slider = projectsSliderRef.current;
-
-  //   if (!slider) return;
-
-  //   let animationFrame;
-  //   let lastTime = performance.now();
-
-  //   const autoScroll = (currentTime) => {
-  //     const delta = currentTime - lastTime;
-  //     lastTime = currentTime;
-
-  //     if (!projectsPausedRef.current && !projectsDragRef.current.isDragging) {
-  //       slider.scrollLeft += delta * 0.10;
-
-  //       const firstSet = slider.querySelector(".projects-set");
-
-  //       if (firstSet) {
-  //         const loopWidth = firstSet.offsetWidth;
-
-  //         if (loopWidth > 0 && slider.scrollLeft >= loopWidth) {
-  //           slider.scrollLeft -= loopWidth;
-  //         }
-  //       }
-  //     }
-
-  //     animationFrame = requestAnimationFrame(autoScroll);
-  //   };
-
-  //   animationFrame = requestAnimationFrame(autoScroll);
-
-  //   return () => {
-  //     cancelAnimationFrame(animationFrame);
-  //   };
-  // }, []);
 
   useEffect(() => {
     const slider = projectsSliderRef.current;
@@ -840,6 +819,8 @@ export default function App() {
       cancelAnimationFrame(animationFrame);
     };
   }, []);
+
+
 
   const handleProjectsPointerDown = (e) => {
     const slider = projectsSliderRef.current;
@@ -933,15 +914,27 @@ export default function App() {
       });
   };
 
-  const handleSmoothScroll = (e, targetId) => {
-    e.preventDefault();
-    setMobileMenuOpen(false);
-    const targetElem = document.getElementById(targetId);
-    if (targetElem) {
-      targetElem.scrollIntoView({ behavior: "smooth" });
-    }
-  };
+const handleSmoothScroll = (e, targetId) => {
+  e.preventDefault();
+  setMobileMenuOpen(false);
 
+  if (targetId === "hero") {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+    return;
+  }
+
+  const targetElem = document.getElementById(targetId);
+
+  if (targetElem) {
+    targetElem.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  }
+};
   const handleContactSubmit = async (e) => {
     e.preventDefault();
 
@@ -1037,12 +1030,11 @@ export default function App() {
           width: max-content;
           animation: marqueeRight 26s linear infinite;
         }
+          .marquee-paused {
+  animation-play-state: paused !important;
+}
 
-        .marquee-wrapper:hover .marquee-track-left,
-        .marquee-wrapper:hover .marquee-track-fast,
-        .marquee-wrapper:hover .marquee-track-right {
-          animation-play-state: paused;
-        }
+ 
 
         /* Ghost Typography Stroke */
         .text-stroke-white {
@@ -1293,7 +1285,7 @@ lg:[-webkit-mask-image:none]
 
                 <div className="flex items-center gap-2">
                   <a
-                    href="https://github.com"
+                    href="https://github.com/Manikanta000001"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-10 h-10 rounded-full bg-white/10 hover:bg-white text-white hover:text-[#4162ff] flex items-center justify-center transition-all duration-300 hover:scale-110"
@@ -1303,7 +1295,7 @@ lg:[-webkit-mask-image:none]
                   </a>
 
                   <a
-                    href="https://linkedin.com"
+                    href="https://www.linkedin.com/in/vulavapatimanikanta"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-10 h-10 rounded-full bg-white/10 hover:bg-white text-white hover:text-[#4162ff] flex items-center justify-center transition-all duration-300 hover:scale-110"
@@ -1313,7 +1305,7 @@ lg:[-webkit-mask-image:none]
                   </a>
 
                   <a
-                    href="https://twitter.com"
+                    href="https://x.com/Manikantaidk"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-10 h-10 rounded-full bg-white/10 hover:bg-white text-white hover:text-[#4162ff] flex items-center justify-center transition-all duration-300 hover:scale-110"
@@ -1346,8 +1338,11 @@ lg:[-webkit-mask-image:none]
       </div>
 
       {}
-      <div className="w-full bg-slate-900 text-white py-3.5 overflow-hidden border-y border-slate-800 select-none marquee-wrapper">
-        <div className="marquee-track-left">
+<div
+  className="w-full bg-slate-900 text-white py-3.5 overflow-hidden border-y border-slate-800 select-none marquee-wrapper cursor-pointer"
+  onClick={pauseMarquee}
+>
+  <div className="marquee-track-left">
           {[0, 1].map((copyIdx) => (
             <div
               key={copyIdx}
@@ -1454,9 +1449,12 @@ lg:[-webkit-mask-image:none]
       </section>
 
       {}
-      <div className="overflow-hidden py-8 select-none marquee-wrapper">
-        <div className="angled-banner bg-[#ffe600] text-slate-950 py-3.5 sm:py-4 border-y-2 border-slate-950 shadow-xl overflow-hidden">
-          <div className="marquee-track-fast">
+<div
+  className="overflow-hidden py-8 select-none marquee-wrapper cursor-pointer"
+  onClick={pauseMarquee}
+>
+  <div className="angled-banner bg-[#ffe600] text-slate-950 py-3.5 sm:py-4 border-y-2 border-slate-950 shadow-xl overflow-hidden">
+    <div className="marquee-track-fast">
             {[0, 1].map((copyIdx) => (
               <div
                 key={copyIdx}
@@ -2588,8 +2586,11 @@ lg:[-webkit-mask-image:none]
       </section>
 
       {}
-      <div className="w-full bg-slate-950 text-white py-4 sm:py-6 overflow-hidden border-y border-slate-800 select-none marquee-wrapper">
-        <div className="marquee-track-right">
+  <div
+  className="w-full bg-slate-950 text-white py-4 sm:py-6 overflow-hidden border-y border-slate-800 select-none marquee-wrapper cursor-pointer"
+  onClick={pauseMarquee}
+>
+  <div className="marquee-track-right">
           {[0, 1].map((copyIdx) => (
             <div
               key={copyIdx}
@@ -2737,7 +2738,7 @@ lg:[-webkit-mask-image:none]
               </div>
               <div>
                 <a
-                  href="https://github.com"
+                  href="https://github.com/Manikanta000001"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-white/80 hover:text-white transition-colors"
@@ -2747,7 +2748,7 @@ lg:[-webkit-mask-image:none]
               </div>
               <div>
                 <a
-                  href="https://linkedin.com"
+                  href="https://www.linkedin.com/in/vulavapatimanikanta"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-white/80 hover:text-white transition-colors"
@@ -2757,7 +2758,7 @@ lg:[-webkit-mask-image:none]
               </div>
               <div>
                 <a
-                  href="https://twitter.com"
+                  href="https://x.com/Manikantaidk"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-white/80 hover:text-white transition-colors"
@@ -2773,10 +2774,6 @@ lg:[-webkit-mask-image:none]
               </div>
               <p className="text-white/80">Andhra Pradesh, India</p>
               <p className="text-white/70 text-xs">Remote Available</p>
-              <div className="pt-1 text-emerald-300 flex items-center gap-1.5 text-xs font-mono">
-                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
-                <span>Available for Hire</span>
-              </div>
             </div>
           </div>
 
