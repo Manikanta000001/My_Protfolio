@@ -816,7 +816,7 @@ export default async function handler(req, res) {
                     overflow-wrap: anywhere;
                     white-space: pre-wrap;
                   "
-                >I just wanted to take a moment to appreciate the work you’ve been doing. Your commitment and the way you handle things with such professionalism really stand out. I truly value the effort you’re putting in, and it’s been a pleasure working together. Keep doing the great work — it definitely doesn’t go unnoticed!
+                >${safeMessage}
 </p>
               </td>
             </tr>
